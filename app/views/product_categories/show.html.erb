@@ -1,0 +1,18 @@
+show.html.erb
+
+
+ <h2><%=@product_categories.products.name%></h2>
+
+
+<div class="container-index container-index-img">
+  <div class="cards-index">
+    <% @all_products.each do |products| %>
+    <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg")">
+        <h2><%=products.name%></h2>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+

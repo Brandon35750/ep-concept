@@ -23,6 +23,7 @@
 .body {
   height: 400px;
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.86);
+  font-family: Inconsolata;
 }
 
 .brand {
@@ -51,6 +52,7 @@
   background-repeat: repeat, repeat;
   background-attachment: scroll, scroll;
   opacity: 1;
+  font-family: Inconsolata;
 }
 
 .image-2 {
@@ -504,7 +506,7 @@
 }
 
 .text-block-4 {
-  font-family: Adamina, sans-serif;
+  font-family: Inconsolata, sans-serif;
   color: white;
 }
 
@@ -550,7 +552,7 @@
   background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
   background-position: 50% 50%;
   background-size: 100% 100%;
-  font-family: Adamina, sans-serif;
+  font-family: Inconsolata, sans-serif;
   color: #000;
   font-size: 24px;
 }
@@ -638,6 +640,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: Inconsolata;
 }
 
 .div-block-7 {
@@ -706,7 +709,7 @@
   margin-top: 0px;
   margin-left: 0px;
   padding: 32px;
-  font-family: Adamina, sans-serif;
+  font-family: Inconsolata, sans-serif;
   line-height: 20px;
 }
 
@@ -769,7 +772,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Adamina, sans-serif;
+  font-family: Inconsolata, sans-serif;
   font-size: 56px;
   line-height: 56px;
   text-align: center;
@@ -854,42 +857,42 @@
   height: 35%;
 }
 
-.dropdown-link {
-  background-color: transparent;
-  color: white;
-  font-size: 16px;
-}
+// .dropdown-link {
+//   background-color: transparent;
+//   color: white;
+//   font-size: 16px;
+// }
 
-.dropdown-link:hover {
-  background-color: white;
-  color: #000;
-}
+// .dropdown-link:hover {
+//   background-color: white;
+//   color: #000;
+// }
 
-.dropdown-link.hover {
-  background-color: #ddd;
-}
+// .dropdown-link.hover {
+//   background-color: #ddd;
+// }
 
-.dropdown-list {
-  background-color: white;
-}
+// .dropdown-list {
+//   background-color: white;
+// }
 
-.dropdown-list.w--open {
-  background-color: #000;
-  color: white;
-}
+// .dropdown-list.w--open {
+//   background-color: #000;
+//   color: white;
+// }
 
-.dropdown-list.w--open:hover {
-  background-color: #000;
-}
+// .dropdown-list.w--open:hover {
+//   background-color: #000;
+// }
 
-.dropdown-navbar:hover {
-  opacity: 1;
-  color: #ddd;
-}
+// .dropdown-navbar:hover {
+//   opacity: 1;
+//   color: #ddd;
+// }
 
-.text-block-7 {
-  padding-right: 12px;
-}
+// .text-block-7 {
+//   padding-right: 12px;
+// }
 
 @media screen and (max-width: 991px) {
   .collection-list {

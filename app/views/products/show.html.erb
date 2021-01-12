@@ -1,7 +1,22 @@
-Show product
 
-<h2><%=@product.name%></h2>
-<h2><%=@product.description%></h2>
-<h2><%=@product.number_of_customizable_dimensions%></h2>
-<h2><%=@product.product_category_id%></h2>
-
+<!-- <div class="container-5">
+  <h2><%=@product.name%></h2>
+  <h2><%=@product.description%></h2>
+  <h2><%=@product.number_of_customizable_dimensions%></h2>
+  <h2><%=@product.name%></h2>
+  <h2><%=@product.description%></h2>
+  <h2><%=@product.product_category_id%></h2>
+</div> -->
+<div class="text-center container-show">
+<div class="card-trip">
+  <img src="https://www.couverture-facile.fr/wp-content/uploads/2015/11/une-crapaudine-installee-dans-une-gouttiere-910-1200-630.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%=@product.name%></h2>
+      <p><%=@product.description%></p>
+    </div>
+    <h2 class="card-trip-pricing"><%=@product.number_of_customizable_dimensions%></h2>
+    <img src="https://m1.lmcdn.fr/media/1/5adaa4e07eb45f56900353d9/.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+</div>

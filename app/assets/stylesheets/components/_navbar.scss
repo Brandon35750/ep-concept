@@ -18,24 +18,28 @@
   z-index:300;
   padding-top: 8px;
   padding-bottom: 8px;
+  top: 0px;
 }
 
 .text-block-4 p {
   color: black;
   z-index: 300;
+  font-family: Inconsolata;
 }
 
 .topnav {
   background-color: black;
   padding: 0px 30px 0px 30px;
-  padding-top: 32px;
   position: fixed;
+  top: 32px;
   width: 100%;
   display: flex;
+  // text-align: justify;
   justify-content :center;
-  height: 100px;
-  z-index: 299;
-
+  // justify-content: space-between;
+  height: 68px;
+  z-index: 300;
+  justify-content: right;
 }
 
 .topnav a {
@@ -47,6 +51,11 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   margin:16px;
+}
+
+.navbar-liens {
+  width:100%;
+  text-align: center;
 }
 
 .topnav a:not(:first-child):hover  {
@@ -72,7 +81,7 @@ width: 68px;
     float: none;
     border-bottom: none;
     font-size: 18px;
-    color: #005586;
+    color: white;
     padding: 3px 3px;
     text-decoration: none;
     transition: all 0.3s ease-in-out 0.2s;
@@ -96,8 +105,8 @@ width: 68px;
   .topnav a {
     border-bottom: none;
     font-size: 12px;
-    color: #005586;
-    padding: 2px 2px;
+    color: white;
+    padding: 1px 1px;
     text-decoration: none;
     transition: all 0.3s ease-in-out 0.2s;
     letter-spacing: 1px;

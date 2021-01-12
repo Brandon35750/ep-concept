@@ -27,7 +27,6 @@ product_category1 = ProductCategory.create(
 product_category1.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category1.save!
 
-
 product_category2 = ProductCategory.create(
   name: "Evacuation des eaux pluviales",
   )
@@ -74,6 +73,8 @@ product1 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category1,
   )
+product1.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
+
 product1.save!
 
 product2 = Product.create(

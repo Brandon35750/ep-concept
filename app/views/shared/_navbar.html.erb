@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<!-- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
@@ -31,5 +31,38 @@
         </li>
       <% end %>
     </ul>
+  </div>
+</div> -->
+<div class="container-conseil">
+  <div class="text-block-4 text-center">
+    <p>Un conseil ? 06-69-21-67-40- Lundi / Vendredi de 7h30 à 19h30</p></div>
+</div>
+<div class="topnav text-center">
+  <div class="text-center">
+    <%= link_to "/", class: "logo-home" do %>
+    <%= image_tag "logo-max.png", alt: "logo" %>
+    <% end %>
+    <a class="liens"><%= link_to "La société", "species" %></a>
+    <a class="liens"><%= link_to "Les produits", products_path%></a>
+    <a class="liens"><%= link_to "Demande de devis", "#eco-gest"%></a>
+    <a class="liens"><%= link_to "Contact", "gallery"%></a>
+
+    <!-- <a><%= link_to "Login", new_user_session_path%></a> -->
+
+
+
+    <% if user_signed_in? %>
+    <il class="nav-item dropdown">
+      <%#= cl_image_tag current_user.avatar.key, class: "zoom avatar dropdown-toggle m-3", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <div class="dropdown-menu dropdown-menu-right menu-avatar" aria-labelledby="navbarDropdown">
+       <a class="dropdown-item item"><%= link_to "Profile", "" %></a>
+       <a class="dropdown-item item"><%= link_to "Log out", destroy_user_session_path, method: :delete%></a>
+      </div>
+    </il>
+      <% else %>
+      <a class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "text-center" %>
+      </a>
+      <% end %>
   </div>
 </div>

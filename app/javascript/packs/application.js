@@ -24,11 +24,14 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
+import { scrollnavbar } from '../plugins/scroll-navbar.js';
+import { scrollnavbarconseil } from '../plugins/scroll-navbar.js';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+    scrollnavbar();
+    scrollnavbarconseil();
 });

@@ -20,53 +20,56 @@ user1 = User.create(
 user1.save!
 
 product_category1 = ProductCategory.create(
-  name: "Goutiere",
+  name: "Pliage",
   )
 # product_categories1.photo.attach(io: File.open(Rails.root.join('db/fixtures/produit-famille/produit.pnj')), filename: 'produit.pnj')
+
+product_category1.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category1.save!
 
+
 product_category2 = ProductCategory.create(
-  name: "PVC",
+  name: "Evacuation des eaux pluviales",
   )
 product_category2.save!
 
 product_category3 = ProductCategory.create(
-  name: "Leg",
+  name: "Crapaudine / Pare gravier",
   )
 product_category3.save!
 
 product_category4 = ProductCategory.create(
-  name: "Parpita",
+  name: "Ventilation",
   )
 product_category4.save!
 
 product_category5 = ProductCategory.create(
-  name: "Manche",
+  name: "Crosse / Boite à cable",
   )
 product_category5.save!
 
 product_category6 = ProductCategory.create(
-  name: "Tournevis",
+  name: "Boite à eau, tuyau de descente"
   )
 product_category6.save!
 
 product_category7 = ProductCategory.create(
-  name: "Canapé",
+  name: "Gouttiere",
   )
 product_category7.save!
 
 product_category8 = ProductCategory.create(
-  name: "Table",
+  name: "Produits spécifique / Ornement de toiture",
   )
 product_category8.save!
 
 product_category9 = ProductCategory.create(
-  name: "Chaise",
+  name: "Autre",
   )
 product_category9.save!
 
 product1 = Product.create(
-  name: "Goutiere Pani",
+  name: "Costiere",
   description: "Goutiere 56 cm diametre 3",
   number_of_customizable_dimensions: 4,
   product_category: product_category1,
@@ -74,7 +77,7 @@ product1 = Product.create(
 product1.save!
 
 product2 = Product.create(
-  name: "Pani",
+  name: "Bande garde greve",
   description: "Pani de M",
   number_of_customizable_dimensions: 3,
   product_category: product_category1,
@@ -82,66 +85,66 @@ product2 = Product.create(
 product2.save!
 
 product3 = Product.create(
-  name: "Goutiere Pani",
-  description: "Goutiere 56 cm diametre 3",
-  number_of_customizable_dimensions: 4,
-  product_category: product_category2,
+  name: "Bande de rive",
+  description: "Pani de M",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category1,
   )
 product3.save!
 
 product4 = Product.create(
-  name: "Goutiere Pani",
-  description: "Goutiere 56 cm diametre 3",
-  number_of_customizable_dimensions: 4,
-  product_category: product_category2,
+  name: "Bande d'égout",
+  description: "Pani de M",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category1,
   )
 product4.save!
 
 product5 = Product.create(
-  name: "Goutiere Pani",
-  description: "Goutiere 56 cm diametre 3",
-  number_of_customizable_dimensions: 4,
-  product_category: product_category3,
+  name: "Bande à ourlet",
+  description: "Pani de M",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category1,
   )
 product5.save!
 
 product6 = Product.create(
-  name: "Goutiere Pani",
-  description: "Goutiere 56 cm diametre 3",
-  number_of_customizable_dimensions: 4,
-  product_category: product_category3,
+  name: "Couvertine",
+  description: "Pani de M",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category1,
   )
 product6.save!
 
 product7 = Product.create(
-  name: "Goutiere Pani",
-  description: "Goutiere 56 cm diametre 3",
-  number_of_customizable_dimensions: 4,
-  product_category: product_category4,
+  name: "Grille anti rongeur",
+  description: "Pani de M",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category1,
   )
 product7.save!
 
 product8 = Product.create(
-  name: "Goutiere Pani",
-  description: "Goutiere 56 cm diametre 3",
-  number_of_customizable_dimensions: 4,
-  product_category: product_category4,
+  name: "Bande de serrage / solin",
+  description: "Pani de M",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category1,
   )
 product8.save!
 
 product9 = Product.create(
-  name: "Goutiere Pani",
-  description: "Goutiere 56 cm diametre 3",
-  number_of_customizable_dimensions: 4,
-  product_category: product_category5,
+  name: "Grille pare feuille",
+  description: "Pani de M",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category1,
   )
 product9.save!
 
 product10 = Product.create(
-  name: "Goutiere Pani",
-  description: "Goutiere 56 cm diametre 3",
-  number_of_customizable_dimensions: 4,
-  product_category: product_category5,
+  name: "Bande garde greve",
+  description: "Pani de M",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category2,
   )
 product10.save!
 
@@ -149,9 +152,73 @@ product11 = Product.create(
   name: "Goutiere Pani",
   description: "Goutiere 56 cm diametre 3",
   number_of_customizable_dimensions: 4,
-  product_category: product_category1,
+  product_category: product_category2,
   )
 product11.save!
+
+product12 = Product.create(
+  name: "Goutiere Pani",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category2,
+  )
+product12.save!
+
+product13 = Product.create(
+  name: "Goutiere Pani",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category3,
+  )
+product13.save!
+
+product14 = Product.create(
+  name: "Goutiere Pani",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category3,
+  )
+product14.save!
+
+product15 = Product.create(
+  name: "Goutiere Pani",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category4,
+  )
+product15.save!
+
+product16 = Product.create(
+  name: "Goutiere Pani",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category4,
+  )
+product16.save!
+
+product17 = Product.create(
+  name: "Goutiere Pani",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category5,
+  )
+product17.save!
+
+product18 = Product.create(
+  name: "Goutiere Pani",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category5,
+  )
+product18.save!
+
+product19 = Product.create(
+  name: "Goutiere Pani",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category1,
+  )
+product19.save!
 
 customer1 = Customer.create(
   name: "Michel",

@@ -1,6 +1,25 @@
-index.html.erb
+<div class="bannergallery">
+      <div class= "title-gallery">
+        <h1>Tout nos produit</h1>
+        <h3>Choississez votre produit</h3>
+      </div>
+   </div>
+
 
 <div class="container-index container-index-img">
+  <div class="cards-index">
+    <% @products.each do |products| %>
+    <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://m1.lmcdn.fr/media/1/5adaa4e07eb45f56900353d9/.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds)">
+      <h4><%=products.name%></h4>
+        <div class="button">
+          <h4 class="one"><%= link_to "Personnaliser le produit", product_path(products.id)%></h4>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- <div class="container-index container-index-img">
   <div class="cards-index">
     <% @products.each do |products| %>
     <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg")">
@@ -8,4 +27,4 @@ index.html.erb
     </div>
     <% end %>
   </div>
-</div>
+</div> -->

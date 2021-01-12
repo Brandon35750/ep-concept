@@ -1,7 +1,7 @@
 show.html.erb
 
 
- <h2><%=@product_categories.products.name%></h2>
+<!--  <h2><%=@product_categories.products.name%></h2>
 
 
 <div class="container-index container-index-img">
@@ -12,7 +12,27 @@ show.html.erb
     </div>
     <% end %>
   </div>
+</div> -->
+
+
+<div class="bannergallery">
+      <div class= "title-gallery">
+        <h1><%=@product_categories.name%></h1>
+        <h3>Choississez votre produit</h3>
+      </div>
+   </div>
+
+
+<div class="container-index container-index-img">
+  <div class="cards-index">
+    <% @all_products.each do |products| %>
+    <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.couverture-facile.fr/wp-content/uploads/2015/11/une-crapaudine-installee-dans-une-gouttiere-910-1200-630.jpg)">
+      <h4><%=products.name%></h4>
+        <div class="button">
+          <h4 class="one"><%= link_to "Personnaliser le produit", product_path(products.id)%></h4>
+        </div>
+    </div>
+    <% end %>
+  </div>
 </div>
-
-
 

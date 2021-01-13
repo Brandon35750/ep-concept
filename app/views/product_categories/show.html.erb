@@ -26,7 +26,7 @@ show.html.erb
 <div class="container-index container-index-img">
   <div class="cards-index">
     <% @all_products.each do |products| %>
-    <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.couverture-facile.fr/wp-content/uploads/2015/11/une-crapaudine-installee-dans-une-gouttiere-910-1200-630.jpg)">
+    <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path products.photo.key %>)">
       <h4><%=products.name%></h4>
         <div class="button">
           <h4 class="one"><%= link_to "Personnaliser le produit", product_path(products.id)%></h4>

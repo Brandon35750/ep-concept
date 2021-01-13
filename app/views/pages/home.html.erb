@@ -49,7 +49,7 @@
         <div class="container-index container-index-img">
           <div class="cards-index">
             <% @product_categories.each do |product_categories| %>
-            <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://www.cultureindoor.com/15747-large_default/winflex-extracteur-d-air-quietline-o125mm-145-197m3-h.jpg)">
+            <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path product_categories.photo.key %>)">
               <h4><%=product_categories.name%></h4>
                 <div class="button">
                   <h4 class="one"><%= link_to "Acceder aux produits", product_category_path(product_categories.id)%></h4>
@@ -68,10 +68,10 @@
     <div class="div-block-8">
       <div class="div-block-10"></div>
     </div>
-    <div class="div-block-11"><img src="images/Livraison.jpg" loading="lazy" height="16" width="125.5" alt="" class="image-4"><img src="images/Carte-France.jpg" loading="lazy" alt="" class="image-5"><img src="images/Fabrication-sur-mesure.jpg" loading="lazy" width="69.5" alt="" class="image-8"><img src="images/Fabriquer-en-france.jpg" loading="lazy" width="93.5" alt="" class="image-7"><img src="images/Produit-de-qualité-respect-des-normes.png" loading="lazy" alt="" class="image-6"></div>
+    <div class="div-block-11" id="society"><img src="images/Livraison.jpg" loading="lazy" height="16" width="125.5" alt="" class="image-4"><img src="images/Carte-France.jpg" loading="lazy" alt="" class="image-5"><img src="images/Fabrication-sur-mesure.jpg" loading="lazy" width="69.5" alt="" class="image-8"><img src="images/Fabriquer-en-france.jpg" loading="lazy" width="93.5" alt="" class="image-7"><img src="images/Produit-de-qualité-respect-des-normes.png" loading="lazy" alt="" class="image-6"></div>
   </div>
   <div class="section-4">
-    <div class="div-block-8 resume">
+    <div class="div-block-8 resume" >
       <div class="text-block-5 description-ep">Note: Réseau de partenaire locaux et nationaux.<br>‍<br>Réactivité, Qualité<br>‍<br>Envoyer vos demande de prix facilement<br>‍<br>Sur chantier avec votre smartphone<br>‍<br>Au bureau avec votre PC<br>‍<br>Par téléphone<br>‍<br>Par mail<br>‍<br>Demande de devis intuitif, Facile d&#x27;utilisation et rapide<br>‍<br>Demande de prix rapide et facile, pour pouvoir répondre à vos appels d&#x27;offre dans les meilleurs délai. Et anticiper vos commandes<br>‍<br>Délai de fabrication et livraison rapide grâce au réseau de partenaire locaux et nationaux</div>
     </div>
   </div>
@@ -79,4 +79,5 @@
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
+
 

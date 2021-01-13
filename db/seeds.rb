@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.new(name: 'Luke', movie: movies.first)
 
-ProductCategory.destroy_all
 Product.destroy_all
+ProductCategory.destroy_all
 User.destroy_all
-Customer.destroy_all
 Quote.destroy_all
 QuoteProduct.destroy_all
+Customer.destroy_all
 
 user1 = User.create(
   email: "brandon@example.com",
@@ -24,47 +24,55 @@ product_category1 = ProductCategory.create(
   )
 # product_categories1.photo.attach(io: File.open(Rails.root.join('db/fixtures/produit-famille/produit.pnj')), filename: 'produit.pnj')
 
-product_category1.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
+product_category1.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/example.jpeg')), filename: 'example.jpeg')
 product_category1.save!
 
 product_category2 = ProductCategory.create(
   name: "Evacuation des eaux pluviales",
   )
+product_category2.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category2.save!
 
 product_category3 = ProductCategory.create(
   name: "Crapaudine / Pare gravier",
   )
+product_category3.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category3.save!
 
 product_category4 = ProductCategory.create(
   name: "Ventilation",
   )
+product_category4.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category4.save!
 
 product_category5 = ProductCategory.create(
   name: "Crosse / Boite à cable",
   )
+product_category5.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category5.save!
 
 product_category6 = ProductCategory.create(
   name: "Boite à eau, tuyau de descente"
   )
+product_category6.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category6.save!
 
 product_category7 = ProductCategory.create(
   name: "Gouttiere",
   )
+product_category7.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category7.save!
 
 product_category8 = ProductCategory.create(
   name: "Produits spécifique / Ornement de toiture",
   )
+product_category8.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category8.save!
 
 product_category9 = ProductCategory.create(
   name: "Autre",
   )
+product_category9.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
 product_category9.save!
 
 product1 = Product.create(
@@ -74,7 +82,7 @@ product1 = Product.create(
   product_category: product_category1,
   )
 product1.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-
+product1.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/goutiere-dim.png')), filename: 'goutiere-dim.png')
 product1.save!
 
 product2 = Product.create(
@@ -83,6 +91,8 @@ product2 = Product.create(
   number_of_customizable_dimensions: 3,
   product_category: product_category1,
   )
+product2.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
+product2.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/goutiere-dim.png')), filename: 'goutiere-dim.png')
 product2.save!
 
 product3 = Product.create(
@@ -91,6 +101,7 @@ product3 = Product.create(
   number_of_customizable_dimensions: 3,
   product_category: product_category1,
   )
+product3.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product3.save!
 
 product4 = Product.create(
@@ -99,6 +110,7 @@ product4 = Product.create(
   number_of_customizable_dimensions: 3,
   product_category: product_category1,
   )
+product4.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product4.save!
 
 product5 = Product.create(
@@ -107,6 +119,7 @@ product5 = Product.create(
   number_of_customizable_dimensions: 3,
   product_category: product_category1,
   )
+product5.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product5.save!
 
 product6 = Product.create(
@@ -115,6 +128,7 @@ product6 = Product.create(
   number_of_customizable_dimensions: 3,
   product_category: product_category1,
   )
+product6.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product6.save!
 
 product7 = Product.create(
@@ -123,6 +137,7 @@ product7 = Product.create(
   number_of_customizable_dimensions: 3,
   product_category: product_category1,
   )
+product7.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product7.save!
 
 product8 = Product.create(
@@ -131,6 +146,7 @@ product8 = Product.create(
   number_of_customizable_dimensions: 3,
   product_category: product_category1,
   )
+product8.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product8.save!
 
 product9 = Product.create(
@@ -139,6 +155,7 @@ product9 = Product.create(
   number_of_customizable_dimensions: 3,
   product_category: product_category1,
   )
+product9.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product9.save!
 
 product10 = Product.create(
@@ -147,6 +164,7 @@ product10 = Product.create(
   number_of_customizable_dimensions: 3,
   product_category: product_category2,
   )
+product10.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product10.save!
 
 product11 = Product.create(
@@ -155,6 +173,7 @@ product11 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product11.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product11.save!
 
 product12 = Product.create(
@@ -163,6 +182,7 @@ product12 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product12.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product12.save!
 
 product13 = Product.create(
@@ -171,6 +191,7 @@ product13 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product13.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product13.save!
 
 product14 = Product.create(
@@ -179,6 +200,7 @@ product14 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product14.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product14.save!
 
 product15 = Product.create(
@@ -187,6 +209,7 @@ product15 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product15.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product15.save!
 
 product16 = Product.create(
@@ -195,6 +218,7 @@ product16 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product16.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product16.save!
 
 product17 = Product.create(
@@ -203,6 +227,7 @@ product17 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product17.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product17.save!
 
 product18 = Product.create(
@@ -211,6 +236,7 @@ product18 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product18.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product18.save!
 
 product19 = Product.create(
@@ -219,6 +245,7 @@ product19 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product19.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product19.save!
 
 product20 = Product.create(
@@ -227,6 +254,7 @@ product20 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product20.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product20.save!
 
 product21 = Product.create(
@@ -235,6 +263,7 @@ product21 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product21.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product21.save!
 
 product22 = Product.create(
@@ -243,6 +272,7 @@ product22 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product22.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product22.save!
 
 product23 = Product.create(
@@ -251,6 +281,7 @@ product23 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product23.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product23.save!
 
 product24 = Product.create(
@@ -259,6 +290,7 @@ product24 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category2,
   )
+product24.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product24.save!
 
 product25 = Product.create(
@@ -267,6 +299,7 @@ product25 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category3,
   )
+product25.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product25.save!
 
 product26 = Product.create(
@@ -275,6 +308,7 @@ product26 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category3,
   )
+product26.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product26.save!
 
 
@@ -284,6 +318,7 @@ product27 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category3,
   )
+product27.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product27.save!
 
 product28 = Product.create(
@@ -292,6 +327,7 @@ product28 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category4,
   )
+product28.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product28.save!
 
 product29 = Product.create(
@@ -300,6 +336,7 @@ product29 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category4,
   )
+product29.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product29.save!
 
 product30 = Product.create(
@@ -308,6 +345,7 @@ product30 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category4,
   )
+product30.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product30.save!
 
 product31 = Product.create(
@@ -316,6 +354,7 @@ product31 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category4,
   )
+product31.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product31.save!
 
 product32 = Product.create(
@@ -324,6 +363,7 @@ product32 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category4,
   )
+product32.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product32.save!
 
 product33 = Product.create(
@@ -332,6 +372,7 @@ product33 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category5,
   )
+product33.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product33.save!
 
 product34 = Product.create(
@@ -340,6 +381,7 @@ product34 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category5,
   )
+product34.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product34.save!
 
 product35 = Product.create(
@@ -348,6 +390,7 @@ product35 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category5,
   )
+product35.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product35.save!
 
 product36 = Product.create(
@@ -356,6 +399,7 @@ product36 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category5,
   )
+product36.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product36.save!
 
 product37 = Product.create(
@@ -364,6 +408,7 @@ product37 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category5,
   )
+product37.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product37.save!
 
 product38 = Product.create(
@@ -372,6 +417,7 @@ product38 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category6,
   )
+product38.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product38.save!
 
 product39 = Product.create(
@@ -380,6 +426,7 @@ product39 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category6,
   )
+product39.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product39.save!
 
 product40 = Product.create(
@@ -388,15 +435,17 @@ product40 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category6,
   )
+product40.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product40.save!
 
-product42 = Product.create(
+product41 = Product.create(
   name: "Boite à eau alu laqué rectangulaire",
   description: "Goutiere 56 cm diametre 3",
   number_of_customizable_dimensions: 4,
   product_category: product_category6,
   )
-product42.save!
+product41.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
+product41.save!
 
 product43 = Product.create(
   name: "Boite à eau alu laqué ronde",
@@ -404,6 +453,7 @@ product43 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category6,
   )
+product43.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product43.save!
 
 product44 = Product.create(
@@ -412,6 +462,7 @@ product44 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category6,
   )
+product44.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product44.save!
 
 product45 = Product.create(
@@ -420,6 +471,7 @@ product45 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category7,
   )
+product45.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product45.save!
 
 product46 = Product.create(
@@ -428,6 +480,7 @@ product46 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category7,
   )
+product46.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product46.save!
 
 product47 = Product.create(
@@ -436,6 +489,7 @@ product47 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category7,
   )
+product47.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product47.save!
 
 product48 = Product.create(
@@ -444,6 +498,7 @@ product48 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category7,
   )
+product48.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product48.save!
 
 product49 = Product.create(
@@ -452,6 +507,7 @@ product49 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category8,
   )
+product49.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product49.save!
 
 product50 = Product.create(
@@ -460,6 +516,7 @@ product50 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category8,
   )
+product50.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product50.save!
 
 product51 = Product.create(
@@ -468,6 +525,7 @@ product51 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category8,
   )
+product51.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product51.save!
 
 product52 = Product.create(
@@ -476,6 +534,7 @@ product52 = Product.create(
   number_of_customizable_dimensions: 4,
   product_category: product_category8,
   )
+product52.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 product52.save!
 
 customer1 = Customer.create(

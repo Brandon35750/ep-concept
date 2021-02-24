@@ -1,0 +1,17 @@
+<% @quote_products.each do |quote_product| %>
+
+   <h1><%=@quote_products.quantity%></h1>
+  <p class="tag1 btn-del-edit"><%= link_to 'Supprimer', quote_products, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <p class="tag1 btn-del-edit"><%= link_to 'Modifier', new_quote_products_path%></p>
+<% end %>
+
+
+<div class="card-product">
+  <% @quote_products.each do |quote_product| %>
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,19 @@
+<div class="container-show-1 mt-5">
+  <div class="text-center container-show">
+    <div class="text-form-tool">
+      <%= simple_form_for @quote_products, url: quote_products_path do |f| %>
+      <%= f.input :quantity %>
+      <%= f.input :dimensionA %>
+      <%= f.input :dimensionB %>
+      <%= f.input :dimensionC %>
+      <%= f.input :dimensionD %>
+      <%= f.input :product %>
+      <%= f.input :quote %>
+      <%= f.input :comment %>
+        <div class="btn-submit">
+          <%= f.submit %>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>

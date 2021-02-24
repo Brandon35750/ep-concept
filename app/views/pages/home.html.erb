@@ -49,7 +49,7 @@
         <div class="container-index container-index-img">
           <div class="cards-index">
             <% @product_categories.each do |product_categories| %>
-            <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path product_categories.photo.key %>)">
+            <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path product_categories.photo.key %>)">
               <h4><%=product_categories.name%></h4>
                 <div class="button">
                   <h4 class="one"><%= link_to "Acceder aux produits", product_category_path(product_categories.id)%></h4>

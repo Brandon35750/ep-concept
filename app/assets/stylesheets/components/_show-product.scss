@@ -1,7 +1,14 @@
 .container-show {
   width: 50%;
   height: 100%;
-  margin-top: 88px;
+  margin-left: 32px;
+}
+
+.container-show-form {
+  position: right;
+  width: 50%;
+  height: 100%;
+  margin: 0px 32px 0px 32px;
 }
 
 .card-trip {
@@ -12,9 +19,9 @@
 }
 
 .card-trip > img {
-  height: 320px;
+  height: 400px;
   width: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
 .card-trip h2 {
@@ -43,4 +50,10 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.container-show-1 {
+  width:100%;
+  height:100%;
+  display:flex;
 }

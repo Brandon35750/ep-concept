@@ -1,0 +1,22 @@
+<% @cart_items.each do |cart_item| %>
+  <h2><%= cart_item.product.name %></h2>
+  <ul>
+    <li>Dimension A: <%= cart_item.dimensionA %></li>
+    <li>Dimension B: <%= cart_item.dimensionB %></li>
+    <li>Dimension C: <%= cart_item.dimensionC %></li>
+    <li>Dimension D: <%= cart_item.dimensionD %></li>
+    <li>Dimension E: <%= cart_item.dimensionE %></li>
+  </ul>
+  <p>Quantité: <%= cart_item.quantity %></p>
+  <p>Comment: <%= cart_item.comment %></p>
+<% end %>
+
+<%= simple_form_for @customer, url: quotes_url do |f| %>
+    <%= f.input :email %>
+    <%= f.input :name %>
+    <%= f.input :society %>
+    <%= f.input :phone %>
+    <%= f.input :city %>
+    <%= f.button :submit %>
+  <% end %>
+

@@ -4,7 +4,7 @@ class QuoteProductsController < ApplicationController
   end
 
   def show
-    @quote_products = Quote_products.find(params[:id])
+    @quote_products = QuoteProduct.find(params[:id])
   end
 
   def new

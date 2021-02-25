@@ -1,12 +1,3 @@
-
-<!-- <div class="container-5">
-  <h2><%=@product.name%></h2>
-  <h2><%=@product.description%></h2>
-  <h2><%=@product.number_of_customizable_dimensions%></h2>
-  <h2><%=@product.name%></h2>
-  <h2><%=@product.description%></h2>
-  <h2><%=@product.product_category_id%></h2>
-</div> -->
 <div class="bannergallery">
       <div class= "title-gallery">
         <h1><%=@product.name%></h1>
@@ -27,7 +18,19 @@
         </div>
     </div>
   </div>
-  <div class="container-show-form">
+
+
+  <%= simple_form_for [@product, @cart_item] do |f| %>
+    <%= f.input :dimensionA %>
+    <%= f.input :dimensionB %>
+    <%= f.input :dimensionC %>
+    <%= f.input :dimensionD %>
+    <%= f.input :dimensionE %>
+    <%= f.input :quantity %>
+    <%= f.input :comment %>
+    <%= f.button :submit %>
+  <% end %>
+  <!-- <div class="container-show-form">
     <form method="post" action="mail.php">
       <% if @product.number_of_customizable_dimensions == 1 %>
         <div class="form-group">
@@ -76,25 +79,26 @@
           <label for="exampleFormControlInput1">Dimension côte D :</label>
           <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="15 cm">
         </div>
+
+        <% elsif @product.number_of_customizable_dimensions == 5 %>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Dimension côte A :</label>
+          <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="6 cm">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Dimension côte B :</label>
+          <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="8 cm">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Dimension côte C :</label>
+          <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="9 cm">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Dimension côte D :</label>
+          <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="15 cm">
+        </div>
       <% else %>
     <% end %>
-
-    <!-- <div class="form-group">
-      <label for="exampleFormControlInput1">Personalisation de A</label>
-      <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="6 cm">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Personalisation de B</label>
-      <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="8 cm">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Personalisation de C</label>
-      <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="9 cm">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Personalisation de D</label>
-      <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="15 cm">
-    </div> -->
     <div class="form-group">
       <label for="quantity">Quantité :</label>
       <input type="number" id="quantity" name="quantity" min="1" max="500">
@@ -107,7 +111,7 @@
       <button type="submit" class="btn btn-primary mb-2">Valider</button>
     </div>
     </form>
-  </div>
+  </div> -->
 </div>
 
 

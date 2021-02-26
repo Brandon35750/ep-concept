@@ -1,9 +1,9 @@
 <div class="bannergallery">
-      <div class= "title-gallery">
-        <h1><%=@product.name%></h1>
-        <h3>Personaliser votre produit</h3>
-      </div>
-   </div>
+  <div class= "title-gallery">
+    <h1><%=@product.name%></h1>
+    <h3>Personaliser votre produit</h3>
+  </div>
+</div>
 <div class="container-show-1">
   <div class="text-center container-show">
     <div class="card-trip">
@@ -18,19 +18,108 @@
         </div>
     </div>
   </div>
+  <div class="container-show-form">
+    <%= simple_form_for [@product, @cart_item] do |f| %>
+    <form method="post" action="mail.php">
+      <% if @product.number_of_customizable_dimensions == 1 %>
+        <div class="form-group" placeholder="8 cm">
+          <%= f.input :dimensionA, label: 'Dimension A :' %>
+        </div>
 
+      <% elsif @product.number_of_customizable_dimensions == 2 %>
+        <div class="form-group" placeholder="8 cm">
+          <%= f.input :dimensionA, label: 'Dimension A :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionB, label: 'Dimension B :' %>
+        </div>
 
-  <%= simple_form_for [@product, @cart_item] do |f| %>
+      <% elsif @product.number_of_customizable_dimensions == 3 %>
+        <div class="form-group" placeholder="8 cm">
+          <%= f.input :dimensionA, label: 'Dimension A :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionB, label: 'Dimension B :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionC, label: 'Dimension C :' %>
+        </div>
+
+      <% elsif @product.number_of_customizable_dimensions == 4 %>
+        <div class="form-group" placeholder="8 cm">
+          <%= f.input :dimensionA, label: 'Dimension A :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionB, label: 'Dimension B :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionC, label: 'Dimension C :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionD, label: 'Dimension D :' %>
+        </div>
+
+      <% elsif @product.number_of_customizable_dimensions == 5 %>
+        <div class="form-group" placeholder="8 cm">
+          <%= f.input :dimensionA, label: 'Dimension A :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionB, label: 'Dimension B :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionC, label: 'Dimension C :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionD, label: 'Dimension D :' %>
+        </div>
+        <div class="form-group">
+          <%= f.input :dimensionE, label: 'Dimension E :' %>
+        </div>
+      <% else %>
+      <% end %>
+    <div class="form-group">
+      <%= f.input :quantity %>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :comment %>
+    </div>
+    <div class="form-group btn btn-success">
+      <%= f.button :submit %>
+    </div>
+    </form>
+    <% end %>
+  </div>
+</div>
+<!--   <%= simple_form_for [@product, @cart_item] do |f| %>
+    <div class="form-group">
     <%= f.input :dimensionA %>
-    <%= f.input :dimensionB %>
-    <%= f.input :dimensionC %>
-    <%= f.input :dimensionD %>
-    <%= f.input :dimensionE %>
-    <%= f.input :quantity %>
-    <%= f.input :comment %>
-    <%= f.button :submit %>
-  <% end %>
-  <!-- <div class="container-show-form">
+    </div>
+    <div class="form-group">
+      <%= f.input :dimensionB %>
+    </div>
+    <div class="form-group">
+      <%= f.input :dimensionC %>
+    </div>
+    <div class="form-group">
+      <%= f.input :dimensionD %>
+    </div>
+    <div class="form-group">
+      <%= f.input :dimensionE %>
+    </div>
+    <div class="form-group">
+      <%= f.input :quantity %>
+    </div>
+    <div class="form-group">
+      <%= f.input :comment %>
+    </div>
+    <div class="form-group">
+      <%= f.button :submit %>
+    </div>
+  <% end %> -->
+
+<!-- <div class="container-show-form">
+    <%= simple_form_for [@product, @cart_item] do |f| %>
     <form method="post" action="mail.php">
       <% if @product.number_of_customizable_dimensions == 1 %>
         <div class="form-group">
@@ -49,16 +138,15 @@
         </div>
 
       <% elsif @product.number_of_customizable_dimensions == 3 %>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Dimension côte A :</label>
-          <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="6 cm">
+        <div class="form-group" placeholder="8 cm">
+          <%= f.input :dimensionA %>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlInput1">Dimension côte B :</label>
+          <%= f.input :dimensionB %>
           <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="8 cm">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlInput1">Dimension côte C :</label>
+          <%= f.input :dimensionC %>
           <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="9 cm">
         </div>
 
@@ -98,7 +186,7 @@
           <input type="dimensions" class="form-control" id="exampleFormControlInput1" placeholder="15 cm">
         </div>
       <% else %>
-    <% end %>
+      <% end %>
     <div class="form-group">
       <label for="quantity">Quantité :</label>
       <input type="number" id="quantity" name="quantity" min="1" max="500">
@@ -111,7 +199,10 @@
       <button type="submit" class="btn btn-primary mb-2">Valider</button>
     </div>
     </form>
-  </div> -->
+    <% end %>
+  </div>
 </div>
 
 
+
+ -->

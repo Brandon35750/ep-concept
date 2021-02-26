@@ -12,11 +12,11 @@
 <% end %>
 
 <%= simple_form_for @customer, url: quotes_url do |f| %>
-    <%= f.input :email %>
-    <%= f.input :name %>
-    <%= f.input :society %>
-    <%= f.input :phone %>
-    <%= f.input :city %>
+    <%= f.input :email, label: 'Email :' %>
+    <%= f.input :name, label: 'Nom' %>
+    <%= f.input :society, label: 'Société' %>
+    <%= f.input :phone, label: 'Téléphone' %>
+    <%= f.input :city, label: 'Ville' %>
     <%= f.button :submit %>
   <% end %>
 

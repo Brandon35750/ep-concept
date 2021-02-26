@@ -1,0 +1,22 @@
+.cart-panier {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 0 auto;
+  // width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  margin-bottom: 64px;
+}
+
+@media(max-width: 992px) {
+  .cart-panier {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 768px) {
+  .cart-panier {
+    grid-template-columns: 1fr;
+  }
+}

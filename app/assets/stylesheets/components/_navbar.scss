@@ -10,6 +10,16 @@
 // .navbar-lewagon .navbar-brand img {
 //   width: 40px;
 // }
+.btn {
+  background-color: grey;
+  color: white;
+}
+
+.btn-success {
+  background-color: grey;
+  color: white;
+}
+
 .container-conseil {
   width:100%;
   height:32px;
@@ -31,7 +41,7 @@
 .topnav {
   background-color: black;
   padding: 0px 30px 0px 30px;
-  // position: fixed;
+  position: fixed;
   top: 32px;
   width: 100%;
   display: flex;

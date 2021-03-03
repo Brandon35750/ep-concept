@@ -1,65 +1,70 @@
-<div class="container-show-1">
-  <div class="cart-panier">
-    <% @cart_items.each do |cart_item| %>
-    <div class="wrapper">
-      <div class="product-img">
-        <img src="<%= cl_image_path cart_item.product.photo.key %>" height="320" width="227">
-      </div>
-      <div class="product-info">
-        <div class="product-text">
-          <h1><%= cart_item.product.name %></h1>
-          <h2>Quantité: <%= cart_item.quantity %></h2>
-          <ul>
-            <% if cart_item.product.number_of_customizable_dimensions == 1 %>
-              <li>Dimension A: <%= cart_item.dimensionA %></li>
-
-            <% elsif cart_item.product.number_of_customizable_dimensions == 2 %>
-              <li>Dimension A: <%= cart_item.dimensionA %></li>
-              <li>Dimension B: <%= cart_item.dimensionB %></li>
-
-            <% elsif cart_item.product.number_of_customizable_dimensions == 3 %>
-              <li>Dimension A: <%= cart_item.dimensionA %></li>
-              <li>Dimension B: <%= cart_item.dimensionB %></li>
-              <li>Dimension C: <%= cart_item.dimensionC %></li>
-
-            <% elsif cart_item.product.number_of_customizable_dimensions == 4 %>
-              <li>Dimension A: <%= cart_item.dimensionA %></li>
-              <li>Dimension B: <%= cart_item.dimensionB %></li>
-              <li>Dimension C: <%= cart_item.dimensionC %></li>
-              <li>Dimension D: <%= cart_item.dimensionD %></li>
-
-            <% elsif cart_item.product.number_of_customizable_dimensions == 5 %>
-              <li>Dimension A: <%= cart_item.dimensionA %></li>
-              <li>Dimension B: <%= cart_item.dimensionB %></li>
-              <li>Dimension C: <%= cart_item.dimensionC %></li>
-              <li>Dimension D: <%= cart_item.dimensionD %></li>
-              <li>Dimension E: <%= cart_item.dimensionE %></li>
-
-
-            <% else %>
-            <% end %>
-          </ul>
-          <p>Comment: <%= cart_item.comment %></p>
+<div class="container">
+  <div class="bannergallery">
+        <div class= "title-gallery">
+          <!-- <h1>Votre panier</h1> -->
         </div>
-        <!-- <div class="product-price-btn">
-          <p><span>78</span>$</p>
-          <button type="button">buy now</button>
-        </div> -->
+      </div>
+      <div class="container">
+        <h1>Finaliser mon devis</h1>
+      </div>
+
+  <div class="container-cart">
+      <div class="container">
+        <% @cart_items.each do |cart_item| %>
+        <div class="cart">
+          <div class="product">
+            <header>
+              <a class="remove">
+                <img src="<%= cl_image_path cart_item.product.photo.key %>" height="320" width="227">
+              </a>
+            </header>
+            <div class="content">
+              <h1><%= cart_item.product.name %></h1>
+              <p>Quantité : <%= cart_item.quantity %></p>
+                  <ul>
+              <% if cart_item.product.number_of_customizable_dimensions == 1 %>
+                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+
+              <% elsif cart_item.product.number_of_customizable_dimensions == 2 %>
+                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+                <li>Dimension B : <%= cart_item.dimensionB %> (mm) </li>
+
+              <% elsif cart_item.product.number_of_customizable_dimensions == 3 %>
+                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+                <li>Dimension B : <%= cart_item.dimensionB %> (mm) </li>
+                <li>Dimension C : <%= cart_item.dimensionC %> (mm) </li>
+
+              <% elsif cart_item.product.number_of_customizable_dimensions == 4 %>
+                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+                <li>Dimension B : <%= cart_item.dimensionB %> (mm) </li>
+                <li>Dimension C : <%= cart_item.dimensionC %> (mm) </li>
+                <li>Dimension D : <%= cart_item.dimensionD %> (mm) </li>
+
+              <% elsif cart_item.product.number_of_customizable_dimensions == 5 %>
+                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+                <li>Dimension B : <%= cart_item.dimensionB %> (mm) </li>
+                <li>Dimension C : <%= cart_item.dimensionC %> (mm) </li>
+                <li>Dimension D : <%= cart_item.dimensionD %> (mm) </li>
+                <li>Dimension E : <%= cart_item.dimensionE %> (mm) </li>
+              <% else %>
+              <% end %>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <div class="container-show-form customer">
+      <div class="text-center">
+        <%= simple_form_for @customer, url: quotes_url do |f| %>
+          <%= f.input :email, label: 'Email :' %>
+          <%= f.input :name, label: 'Nom' %>
+          <%= f.input :society, label: 'Société' %>
+          <%= f.input :phone, label: 'Téléphone' %>
+          <%= f.input :city, label: 'Ville' %>
+          <%= f.button :submit, "Demander mon devis" %>
+        <% end %>
       </div>
     </div>
-    <% end %>
-  </div>
-  </div>
-  <div class="container-show-form">
-    <%= simple_form_for @customer, url: quotes_url do |f| %>
-      <%= f.input :email, label: 'Email :' %>
-      <%= f.input :name, label: 'Nom' %>
-      <%= f.input :society, label: 'Société' %>
-      <%= f.input :phone, label: 'Téléphone' %>
-      <%= f.input :city, label: 'Ville' %>
-      <%= f.button :submit %>
-    <% end %>
-  </div>
   </div>
 </div>
-

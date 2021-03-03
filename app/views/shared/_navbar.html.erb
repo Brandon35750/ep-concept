@@ -1,57 +1,58 @@
-<!-- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div> -->
-<div class="container-conseil">
+<!-- <div class="container-conseil">
   <div class="text-block-4 text-center">
     <p>Un conseil ? 06-69-21-67-40- Lundi / Vendredi de 7h30 à 19h30</p></div>
-</div>
-<div class="topnav">
+  </div>
+  <div class="topnav">
   <div class="navbar-liens">
     <%= link_to "/", class: "logo-home" do %>
     <%= image_tag "logo-max.png", alt: "logo" %>
     <% end %>
-    <!-- <a class="liens"><%= link_to "La société", "" %></a> -->
     <a class="liens" href="#society">La société</a>
     <a class="liens"><%= link_to "Les produits", products_path%></a>
     <a class="liens"><%= link_to "Demande de devis", ""%></a>
     <a class="liens"><%= link_to "Contact", ""%></a>
     <a class="liens"><%= link_to "Panier", cart_path%></a>
+    <a><%= link_to "Login", new_user_session_path%></a>
+  </div>
+</div> -->
 
 
-    <!-- <a><%= link_to "Login", new_user_session_path%></a> -->
-
-
+<div class="container-conseil">
+  <div class="text-block-4 text-center">
+    <p>Un conseil ? 06-69-21-67-40- Lundi / Vendredi de 7h30 à 19h30</p>
   </div>
 </div>
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <!-- EpConcept -->
+      <a href="/">EpConcept</a>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <div class="nav-links">
+    <a href="#society">La société</a>
+    <!-- <a><%= link_to "Les produits", products_path%></a> -->
+    <a href="products">Les produits</a>
+   <!--  <a><%= link_to "Demande de devis", ""%></a> -->
+    <a href="#">Demande de devis</a>
+    <!-- <a><%= link_to "Contact", ""%></a> -->
+    <a href="#">Contact</a>
+    <!-- <a class="liens fab fa-facebook-f"><%= link_to "Panier", cart_path%></a> -->
+    <a href="cart"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+</div>
+
+<a class="dropdown-toggle" href="#"  id="deroulanta" data-toggle="dropdown">Nos produits</a>
+      <div class="dropdown-menu" aria-labelledby="deroulanta">
+        <% @product_categories.each do |product_categories| %>
+        <a class="dropdown-item" href="#"><%=product_categories.name%></a>
+      <% end %>
+      </div>

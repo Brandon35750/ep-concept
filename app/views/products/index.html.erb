@@ -1,19 +1,25 @@
-<div class="bannergallery">
-  <div class= "title-gallery">
-    <h1>Tous nos produit</h1>
-    <h3>Choississez votre produit</h3>
-  </div>
-</div>
-
-<div class="container-index container-index-img">
-  <div class="cards-index">
-    <% @products.each do |products| %>
-    <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path products.photo.key %>)">
-      <h4><%=products.name%></h4>
-        <div class="button">
-          <h4 class="one"><%= link_to "Personnaliser le produit", product_path(products.id)%></h4>
-        </div>
+<div class="container">
+  <div class="bannergallery">
+    <div class= "title-gallery">
+      <h1>Tous nos produits</h1>
     </div>
-    <% end %>
+  </div>
+  <div class="container">
+      <h1>Choississez votre produit</h1>
+  </div>
+
+  <div class="container">
+  <div class="container-index-img">
+    <div class="cards-index">
+      <% @products.each do |products| %>
+      <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path products.photo.key %>)">
+        <h4><%=products.name%></h4>
+          <div class="button">
+            <h4 class="one"><%= link_to "Personnaliser le produit", product_path(products.id)%></h4>
+          </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
   </div>
 </div>

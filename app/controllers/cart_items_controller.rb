@@ -4,7 +4,7 @@ class CartItemsController < ApplicationController
     @cart_item.product = Product.find(params[:product_id])
     @cart_item.cart = @cart
     if @cart_item.save
-      redirect_to root_path
+      redirect_to cart_path
     else
       render :new
     end

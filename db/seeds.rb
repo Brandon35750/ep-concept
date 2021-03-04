@@ -416,15 +416,15 @@ product34.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costi
 product34.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/crosse-galva.png')), filename: 'crosse-galva.png')
 product34.save!
 
-# product35 = Product.create(
-#   name: "Crosse Zinc",
-#   description: "Goutiere 56 cm diametre 3",
-#   number_of_customizable_dimensions: 3,
-#   product_category: product_category5,
-#   )
-# product35.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product35.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product35.save!
+product35 = Product.create(
+  name: "Crosse Zinc",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category5,
+  )
+product35.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
+product35.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/crosse-alu.png')), filename: 'crosse-alu.png')
+product35.save!
 
 product36 = Product.create(
   name: "Crosse Plomb / Cuivre",
@@ -566,15 +566,15 @@ product44.save!
 # product50.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 # product50.save!
 
-# product51 = Product.create(
-#   name: "Ep Traditionnel Zinc",
-#   description: "Goutiere 56 cm diametre 3",
-#   number_of_customizable_dimensions: 4,
-#   product_category: product_category8,
-#   )
-# product51.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product51.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product51.save!
+product51 = Product.create(
+  name: "Ep Traditionnel Zinc",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category8,
+  )
+product51.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
+product51.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/ep-alu.png')), filename: 'ep-alu.png')
+product51.save!
 
 # product52 = Product.create(
 #   name: "Girouette coq Zinc",

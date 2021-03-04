@@ -4,5 +4,4 @@ class PagesController < ApplicationController
   def home
     @product_categories = ProductCategory.all
   end
-
 end

@@ -22,7 +22,7 @@
           </div>
       </div>
     </div>
-    <div class="container-show-form">
+    <div class="container-show-form customer">
       <%= simple_form_for [@product, @cart_item] do |f| %>
       <form method="post" action="mail.php">
         <% if @product.number_of_customizable_dimensions == 1 %>

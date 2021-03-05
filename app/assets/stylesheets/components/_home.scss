@@ -9,6 +9,13 @@
   font-family: Inconsolata;
   text-align: center;
   padding-bottom: 32px;
+  h1 {
+    font-family: Inconsolata;
+  }
+
+  h2 {
+    font-family: Inconsolata;
+  }
 }
 
 .container-societe {
@@ -16,7 +23,13 @@
   margin: auto;
   padding-bottom: 32px;
   padding-top: 64px;
-
+  font-family: Inconsolata;
+  h1 {
+    font-family: Inconsolata;
+  }
+  h2 {
+    font-family: Inconsolata;
+  }
 }
 
 .image-2 {
@@ -41,6 +54,7 @@
   padding-top: 16px;
   height: auto;
   background-color: white;
+  font-family: Inconsolata;
 }
 
 .container.main {
@@ -302,6 +316,8 @@
   height: auto;
   padding: 8 px;
   box-shadow: 1px 1px 3px 0 #000, 1px 1px 3px 0 #000;
+  padding-top: 16px;
+  font-family: Inconsolata;
 }
 
 .div-block-11 {
@@ -310,6 +326,7 @@
   margin: auto;
   padding-bottom: 32px;
   padding-top: 64px;
+  font-family: Inconsolata;
 }
 
 .schema img {

@@ -1,50 +1,106 @@
-<body class="body">
-  <div class="section">
-    <div class="sky"></div>
-    <div class="container-3">
-      <h1 class="heading">Le spécialiste des accessoires de couverture et étanchéité sur mesure</h1>
-    </div>
+<div class="section">
+  <div class="sky"></div>
+  <div class="container-3">
+    <h1 class="heading">Le spécialiste des accessoires de couverture et étanchéité sur mesure</h1>
   </div>
-  <div class="section-5">
-    <div class="div-block-9">
-      <div class="text-block-6">Nos gammes de produits</div>
-    </div>
+</div>
+<div class="container-main">
+  <div class="container">
+    <h1>Nos gammes de produits</h1>
   </div>
-  <div class="section-3">
-    <div class="container-4 w-container">
-      <div class="w-dyn-list">
-
-        <div class="container-index container-index-img">
-          <div class="cards-index">
-            <% @product_categories.each do |product_categories| %>
-            <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path product_categories.photo.key %>)">
-              <h4><%=product_categories.name%></h4>
-                <div class="button">
-                  <h4 class="one"><%= link_to "Acceder aux produits", product_category_path(product_categories.id)%></h4>
-                </div>
-            </div>
-            <% end %>
+  <div class="container-index container-index-img">
+    <div class="cards-index">
+      <% @product_categories.each do |product_categories| %>
+        <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path product_categories.photo.key %>)">
+          <h4><%=product_categories.name%></h4>
+            <div class="button">
+              <h4 class="one"><%= link_to "Acceder aux produits", product_category_path(product_categories.id)%></h4>
             </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
-  <div class="section-4 devis-explication">
+  <div class="container" id="society">
+    <div class="container-societe">
+    <h1><strong>Premier réseau de partenaire locaux et nationaux, dans la fabrication et conception de produit de couverture et d’étanchéité</strong>.</h1>
+    </div>
+      <a href="/"><%= image_tag "logo1.jpg", alt: "logo" %></a>
+      <div class="container-home">
+        <div class="div-block-10">
+          <p><strong>Nous vous proposons des produits sur mesure de qualité :</strong>.</p>
+            <ul>
+              <li>PLIAGE</li>
+              <li>EVACUATION DES EAUX PLUVIALES</li>
+              <li>CRAPAUDINE / PARE GRAVIER</li>
+              <li>VENTILATION</li>
+              <li>CROSSE / BOITE A CABLE</li>
+              <li>BOITE A EAU / TUYAU DE DESCENTE</li>
+              <li>GOUTTIERE</li>
+              <li>PRODUITS SPECIFIQUE.</li>
+            </ul>
+        </div>
+        <div class="div-block-10" id="devis">
+          <p><strong>Nous pouvons vous répondre avec différente matières :</strong>.</p>
+            <ul>
+              <li>ALU</li>
+              <li>GALVA</li>
+              <li>ZINC</li>
+              <li>PLOMB</li>
+              <li>CUIVRE</li>
+            </ul>
+        </div>
+      </div>
+      <div class="container-societe">
+        <h1><strong>Un outil de demande de prix en ligne : « Intuitif, Facile d’utilisation, Efficace, rapide.»</strong>.</h1>
+      </div>
+      <div class="container schema">
+        <%= image_tag "shema.png", alt: "logo" %>
+        <h2>Envoyer vos demandes de prix facilement avec l’outil de devis en ligne « EP CONNECT ».</h2>
+              <p>Sur chantier avec votre smartphone.</p>
+              <p>Au bureau avec votre PC.</p>
+      </div>
+      <div class="div-block-11">
+        <h1><strong>Des partenaires à PROXIMITE de vos chantiers, vous apportant REACTIVITE et QUALITE</strong>.</h1>
+          <ul>
+            <p><strong>DEPANNAGE</strong>.</p>
+            <p>Il vous manque un produit sur chantier Vous êtes loin de votre dépôt, dans un autre département, une autre région.</p>
+            <p><strong>STOCK</strong>.</p>
+            <p>Vous êtes dans votre dépôt, vous souhaitez refaire votre stock pour anticiper les chantiers à venir.</p>
+            <p><strong>CHANTIER</strong>.</p>
+            <p>Vous avez un chantier à venir, vous souhaitez prévoir une livraison à votre dépôt ou sur chantier.</p>
+          </ul>
+        <h1><strong>Faire Appel à nous c’est </strong>:</h1>
+          <ul>
+            <p>Limiter les coûts de transport grâce nos partenaires de PROXIMITE.</p>
+            <p>Optimiser le délai de fabrication et de livraison grâce à notre REACTIVITE.</p>
+            <p>Répondre à vos demandes dans les meilleurs délais avec des produits de QUALITE.</p>
+          </ul>
+        </div>
+      <div class="container-societe" id="contact">
+        <h1><strong>Nous garantissons des délais de fabrication et livraison rapide grâce à notre réseau de partenaire locaux, Régionaux et Nationaux</strong>.</h1>
+      </div>
+  </div>
+  <!-- <div class="section-4 devis-explication">
     <div class="div-block-7"></div>
   </div>
   <div class="section-4">
     <div class="div-block-8">
       <div class="div-block-10"></div>
     </div>
-    <div class="div-block-11" id="society"><img src="images/Livraison.jpg" loading="lazy" height="16" width="125.5" alt="" class="image-4"><img src="images/Carte-France.jpg" loading="lazy" alt="" class="image-5"><img src="images/Fabrication-sur-mesure.jpg" loading="lazy" width="69.5" alt="" class="image-8"><img src="images/Fabriquer-en-france.jpg" loading="lazy" width="93.5" alt="" class="image-7"><img src="images/Produit-de-qualité-respect-des-normes.png" loading="lazy" alt="" class="image-6"></div>
+    <div class="div-block-11" id="society">
+      <%= image_tag "logo-france.jpg", alt: "logo" %>
+      <%= image_tag "carte.jpg", alt: "logo" %>
+      <%= image_tag "mesure.jpg", alt: "logo" %>
+      <%= image_tag "qualite.jpg", alt: "logo" %>
   </div>
   <div class="section-4">
     <div class="div-block-8 resume" >
       <div class="text-block-5 description-ep">Note: Réseau de partenaire locaux et nationaux.<br>‍<br>Réactivité, Qualité<br>‍<br>Envoyer vos demande de prix facilement<br>‍<br>Sur chantier avec votre smartphone<br>‍<br>Au bureau avec votre PC<br>‍<br>Par téléphone<br>‍<br>Par mail<br>‍<br>Demande de devis intuitif, Facile d&#x27;utilisation et rapide<br>‍<br>Demande de prix rapide et facile, pour pouvoir répondre à vos appels d&#x27;offre dans les meilleurs délai. Et anticiper vos commandes<br>‍<br>Délai de fabrication et livraison rapide grâce au réseau de partenaire locaux et nationaux</div>
     </div>
-  </div>
+  </div> -->
+
+</div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5fd63f7bbb814e437b40f0ad" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
-</body>
 
 

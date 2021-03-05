@@ -105,15 +105,15 @@ product3.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costie
 product3.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/bande-de-rive.png')), filename: 'bande-de-rive.png')
 product3.save!
 
-# product4 = Product.create(
-#   name: "Bande d'égout",
-#   description: "Pani de M",
-#   number_of_customizable_dimensions: 2,
-#   product_category: product_category1,
-#   )
-# product4.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product4.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product4.save!
+product4 = Product.create(
+  name: "Bande d'égout",
+  description: "Pani de M",
+  number_of_customizable_dimensions: 2,
+  product_category: product_category1,
+  )
+product4.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
+product4.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/bande-egout.png')), filename: 'bande-egout.png')
+product4.save!
 
 product5 = Product.create(
   name: "Bande à ourlet",
@@ -386,15 +386,15 @@ product31.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costi
 product31.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/sdv-zinc.png')), filename: 'sdv-zinc.png')
 product31.save!
 
-# product32 = Product.create(
-#   name: "Chapeau ventilation",
-#   description: "Goutiere 56 cm diametre 3",
-#   number_of_customizable_dimensions: 3,
-#   product_category: product_category4,
-#   )
-# product32.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product32.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product32.save!
+product32 = Product.create(
+  name: "Chapeau ventilation",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 3,
+  product_category: product_category4,
+  )
+product32.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
+product32.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/chapeau-ventilation.png')), filename: 'chapeau-ventilation.png')
+product32.save!
 
 product33 = Product.create(
   name: "Crosse Alu",
@@ -506,45 +506,45 @@ product44.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costi
 product44.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/bae-ronde-zinc.png')), filename: 'bae-ronde-zinc.png')
 product44.save!
 
-# product45 = Product.create(
-#   name: "Gouttiere Alu laqué Corniche",
-#   description: "Goutiere 56 cm diametre 3",
-#   number_of_customizable_dimensions: 4,
-#   product_category: product_category7,
-#   )
+product45 = Product.create(
+  name: "Gouttiere Alu laqué Corniche",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category7,
+  )
 # product45.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 # product45.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product45.save!
+product45.save!
 
-# product46 = Product.create(
-#   name: "Gouttiere Alu laqué Demi rond",
-#   description: "Goutiere 56 cm diametre 3",
-#   number_of_customizable_dimensions: 4,
-#   product_category: product_category7,
-#   )
+product46 = Product.create(
+  name: "Gouttiere Alu laqué Demi rond",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category7,
+  )
 # product46.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 # product46.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product46.save!
+product46.save!
 
-# product47 = Product.create(
-#   name: "Gouttiere Alu laqué Rectangle",
-#   description: "Goutiere 56 cm diametre 3",
-#   number_of_customizable_dimensions: 4,
-#   product_category: product_category7,
-#   )
+product47 = Product.create(
+  name: "Gouttiere Alu laqué Rectangle",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category7,
+  )
 # product47.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 # product47.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product47.save!
+product47.save!
 
-# product48 = Product.create(
-#   name: "Gouttiere Alu/ Zinc/ Galvabrut",
-#   description: "Goutiere 56 cm diametre 3",
-#   number_of_customizable_dimensions: 4,
-#   product_category: product_category7,
-#   )
+product48 = Product.create(
+  name: "Gouttiere Alu/ Zinc/ Galvabrut",
+  description: "Goutiere 56 cm diametre 3",
+  number_of_customizable_dimensions: 4,
+  product_category: product_category7,
+  )
 # product48.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
 # product48.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-# product48.save!
+product48.save!
 
 # product49 = Product.create(
 #   name: "Chatière triangulaire",

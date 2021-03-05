@@ -1,98 +1,100 @@
-<div class="container">
-  <div class="bannergallery">
-    <div class= "title-gallery">
-      <h1><%=@product.name%></h1>
-    </div>
-  </div>
+ <div class="container-main">
   <div class="container">
-    <h1>Personaliser votre produit</h1>
-  </div>
-
-  <div class="container-show-1 container">
-    <div class="text-center container-show">
-      <div class="card-trip">
-        <img src="<%= cl_image_path @product.photo.key %>" height="320" width="227">
-          <div class="card-trip-infos">
-            <div>
-              <h2><%=@product.name%></h2>
-              <p><%=@product.description%></p>
-            </div>
-              <h2 class="card-trip-pricing"><%=@product.number_of_customizable_dimensions%></h2>
-            <img src="https://m1.lmcdn.fr/media/1/5adaa4e07eb45f56900353d9/.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds" class="card-trip-user avatar-bordered" />
-          </div>
+    <div class="bannergallery">
+      <div class= "title-gallery">
+        <h1><%=@product.name%></h1>
       </div>
     </div>
-    <div class="container-show-form customer">
-      <%= simple_form_for [@product, @cart_item] do |f| %>
-      <form method="post" action="mail.php">
-        <% if @product.number_of_customizable_dimensions == 1 %>
-          <div>
-            <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
-          </div>
+    <div class="container">
+      <h1>Personaliser votre produit</h1>
+    </div>
 
-        <% elsif @product.number_of_customizable_dimensions == 2 %>
-          <div>
-            <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionB, label: 'Dimension B : ( en mm )' %>
-          </div>
+    <div class="container-show-1 container">
+      <div class="text-center container-show">
+        <div class="card-trip">
+          <img src="<%= cl_image_path @product.photo.key %>" height="320" width="227">
+            <div class="card-trip-infos">
+              <div>
+                <h2><%=@product.name%></h2>
+                <p>Telecharger le PDF -></p>
+              </div>
+                <!-- <h2 class="card-trip-pricing"><%=@product.number_of_customizable_dimensions%></h2> -->
+              <img src="https://m1.lmcdn.fr/media/1/5adaa4e07eb45f56900353d9/.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds" class="card-trip-user avatar-bordered" />
+            </div>
+        </div>
+      </div>
+      <div class="container-show-form customer">
+        <%= simple_form_for [@product, @cart_item] do |f| %>
+        <form method="post" action="mail.php">
+          <% if @product.number_of_customizable_dimensions == 1 %>
+            <div>
+              <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
+            </div>
 
-        <% elsif @product.number_of_customizable_dimensions == 3 %>
-          <div>
-            <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionB, label: 'Dimension B : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionC, label: 'Dimension C : ( en mm )' %>
-          </div>
+          <% elsif @product.number_of_customizable_dimensions == 2 %>
+            <div>
+              <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionB, label: 'Dimension B : ( en mm )' %>
+            </div>
 
-        <% elsif @product.number_of_customizable_dimensions == 4 %>
-          <div>
-            <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionB, label: 'Dimension B : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionC, label: 'Dimension C : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionD, label: 'Dimension D : ( en mm )' %>
-          </div>
+          <% elsif @product.number_of_customizable_dimensions == 3 %>
+            <div>
+              <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionB, label: 'Dimension B : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionC, label: 'Dimension C : ( en mm )' %>
+            </div>
 
-        <% elsif @product.number_of_customizable_dimensions == 5 %>
-          <div>
-            <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionB, label: 'Dimension B : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionC, label: 'Dimension C : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionD, label: 'Dimension D : ( en mm )' %>
-          </div>
-          <div>
-            <%= f.input :dimensionE, label: 'Dimension E : ( en mm )' %>
-          </div>
-        <% else %>
+          <% elsif @product.number_of_customizable_dimensions == 4 %>
+            <div>
+              <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionB, label: 'Dimension B : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionC, label: 'Dimension C : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionD, label: 'Dimension D : ( en mm )' %>
+            </div>
+
+          <% elsif @product.number_of_customizable_dimensions == 5 %>
+            <div>
+              <%= f.input :dimensionA, label: 'Dimension A : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionB, label: 'Dimension B : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionC, label: 'Dimension C : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionD, label: 'Dimension D : ( en mm )' %>
+            </div>
+            <div>
+              <%= f.input :dimensionE, label: 'Dimension E : ( en mm )' %>
+            </div>
+          <% else %>
+          <% end %>
+        <div>
+          <%= f.input :quantity, label: 'Quantité' %>
+        </div>
+
+        <div>
+          <%= f.input :comment, label: 'Commentaire' %>
+        </div>
+        <div class="form-group btn btn-success">
+          <%= f.button :submit, "Ajouter au panier" %>
+        </div>
+        </form>
         <% end %>
-      <div>
-        <%= f.input :quantity %>
       </div>
-
-      <div>
-        <%= f.input :comment %>
-      </div>
-      <div class="form-group btn btn-success">
-        <%= f.button :submit, "Ajouter au panier" %>
-      </div>
-      </form>
-      <% end %>
     </div>
   </div>
 </div>

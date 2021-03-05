@@ -80,6 +80,10 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
+
+production:
+  <<: *default
   database: ep_concept1_production
   username: ep_concept1
   password: <%= ENV['EP_CONCEPT1_DATABASE_PASSWORD'] %>

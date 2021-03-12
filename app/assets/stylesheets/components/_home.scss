@@ -49,9 +49,9 @@
   grid-gap: 16px;
   margin: 0 auto;
   // width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 16px;
+  // padding-left: 16px;
+  // padding-right: 16px;
+  // padding-top: 16px;
   height: auto;
   background-color: white;
   font-family: Inconsolata;
@@ -317,13 +317,13 @@
   height: auto;
   padding: 8 px;
   box-shadow: 1px 1px 3px 0 #000, 1px 1px 3px 0 #000;
-  padding-top: 16px;
+  padding: 8px;
   font-family: Inconsolata;
 }
 
 .div-block-11 {
   box-shadow: 1px 1px 3px 0 #000, 1px 1px 3px 0 #000;
-  width: 70%;
+  width: 100%;
   margin: auto;
   margin-top:32px;
   font-family: Inconsolata;
@@ -342,3 +342,15 @@
 #society img {
   width: 50%;
 }
+
+@media(max-width: 768px) {
+  .container-home {
+  display: grid;
+  grid-template-columns: 1fr;
+  }
+  .heading {
+    margin-top: 0px;
+    padding: 0px;
+  }
+}
+

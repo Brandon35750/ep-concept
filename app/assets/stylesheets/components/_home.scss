@@ -75,7 +75,7 @@
   align-items: center;
 }
 
-.sky {
+.sky img {
   position: absolute;
   left: 0%;
   top: 0%;
@@ -90,6 +90,7 @@
   background-attachment: scroll;
   -o-object-fit: fill;
   object-fit: fill;
+  width: 100%;
 }
 
 .container-3 {
@@ -351,6 +352,11 @@
   .heading {
     margin-top: 0px;
     padding: 0px;
+  }
+  .container-show-1 {
+    padding: 0px;
+    margin: 0px;
+
   }
 }
 

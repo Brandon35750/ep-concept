@@ -22,7 +22,6 @@
             <h1><%= cart_item.product.name %></h1>
               <p>Quantité : <%= cart_item.quantity %></p>
               <p><%= cart_item.id %></p>
-                <ul>
                 <% if cart_item.product.number_of_customizable_dimensions == 1 %>
                   <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
 
@@ -49,7 +48,6 @@
                   <li>Dimension E : <%= cart_item.dimensionE %> (mm) </li>
                 <% else %>
                 <% end %>
-              </ul>
 <!-- <div class="bin">
          <%= link_to cart_path, class: 'btn', data: {confirm: "Suprimmer le produit du panier?"}, method: :delete do %>
          <i class="far fa-trash-alt fa-2x"></i>

@@ -564,11 +564,11 @@ product48.save!
 product51 = Product.create(
   name: "Ep Traditionnel Zinc",
   description: "Goutiere 56 cm diametre 3",
-  number_of_customizable_dimensions: 4,
+  number_of_customizable_dimensions: 0,
   product_category: product_category8,
   )
-product51.avatar.attach(io: File.open(Rails.root.join('db/fixtures/product/costiere.jpg')), filename: 'costiere.jpg')
-product51.photo.attach(io: File.open(Rails.root.join('db/fixtures/product/ep-alu.png')), filename: 'ep-alu.png')
+product51.avatar.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/produit-specifique.jpg')), filename: 'produit-specifique.jpg')
+product51.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/produit-specifique.jpg')), filename: 'produit-specifique.jpg')
 product51.save!
 
 # product52 = Product.create(

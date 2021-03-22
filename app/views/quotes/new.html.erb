@@ -8,7 +8,7 @@
         <h1>Finaliser mon devis</h1>
       </div>
 
-  <div class="container-cart">
+  <div class="container-customer">
       <div class="container" style="overflow:scroll; border:#000000 0px solid; width: auto; height: 500px;">
         <% @cart_items.each do |cart_item| %>
         <div class="cart">
@@ -21,34 +21,32 @@
             <div class="content">
               <h1><%= cart_item.product.name %></h1>
               <p>Quantité : <%= cart_item.quantity %></p>
-                  <ul>
-              <% if cart_item.product.number_of_customizable_dimensions == 1 %>
-                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+              <%# if cart_item.product.number_of_customizable_dimensions == 1 %>
+                <!-- <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li> -->
 
-              <% elsif cart_item.product.number_of_customizable_dimensions == 2 %>
-                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+              <%# elsif cart_item.product.number_of_customizable_dimensions == 2 %>
+               <!--  <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
                 <li>Dimension B : <%= cart_item.dimensionB %> (mm) </li>
-
-              <% elsif cart_item.product.number_of_customizable_dimensions == 3 %>
-                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+ -->
+              <%# elsif cart_item.product.number_of_customizable_dimensions == 3 %>
+               <!--  <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
                 <li>Dimension B : <%= cart_item.dimensionB %> (mm) </li>
                 <li>Dimension C : <%= cart_item.dimensionC %> (mm) </li>
+ -->
+              <%# elsif cart_item.product.number_of_customizable_dimensions == 4 %>
+                <!-- <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+                <li>Dimension B : <%= cart_item.dimensionB %> (mm) </li>
+                <li>Dimension C : <%= cart_item.dimensionC %> (mm) </li>
+                <li>Dimension D : <%= cart_item.dimensionD %> (mm) </li> -->
 
-              <% elsif cart_item.product.number_of_customizable_dimensions == 4 %>
-                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
+              <%# elsif cart_item.product.number_of_customizable_dimensions == 5 %>
+                <!-- <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
                 <li>Dimension B : <%= cart_item.dimensionB %> (mm) </li>
                 <li>Dimension C : <%= cart_item.dimensionC %> (mm) </li>
                 <li>Dimension D : <%= cart_item.dimensionD %> (mm) </li>
-
-              <% elsif cart_item.product.number_of_customizable_dimensions == 5 %>
-                <li>Dimension A : <%= cart_item.dimensionA %> (mm) </li>
-                <li>Dimension B : <%= cart_item.dimensionB %> (mm) </li>
-                <li>Dimension C : <%= cart_item.dimensionC %> (mm) </li>
-                <li>Dimension D : <%= cart_item.dimensionD %> (mm) </li>
-                <li>Dimension E : <%= cart_item.dimensionE %> (mm) </li>
-              <% else %>
-              <% end %>
-            </ul>
+                <li>Dimension E : <%= cart_item.dimensionE %> (mm) </li> -->
+              <%# else %>
+              <%# end %>
             </div>
           </div>
         </div>

@@ -64,16 +64,11 @@ product_category7.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-pr
 product_category7.save!
 
 product_category8 = ProductCategory.create(
-  name: "Produits spécifique / Ornement de toiture",
+  name: "Produits spécifique / Autre",
   )
 product_category8.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/produit-specifique.jpg')), filename: 'produit-specifique.jpg')
 product_category8.save!
 
-product_category9 = ProductCategory.create(
-  name: "Autre",
-  )
-product_category9.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/goutiere.png')), filename: 'goutiere.png')
-product_category9.save!
 
 product1 = Product.create(
   name: "Costiere",

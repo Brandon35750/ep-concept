@@ -124,7 +124,7 @@
   transform: scale3d(1none, 1none, 1none);
   font-family: Adamina, sans-serif;
   color: white;
-  font-size: 56px;
+  font-size: 80px;
   line-height: 1;
   text-align: center;
   -webkit-transform-style: preserve-3d;
@@ -331,17 +331,25 @@
   padding: 32px;
 }
 
-.schema img {
-  width: 500px;
-}
 
-.container img {
-  width: 100%;
-  margin-bottom: 64px;
-}
+// .container img {
+//   width: 100%;
+// }
 
-#society img {
+#logo img {
   width: 50%;
+}
+
+.schema {
+  background-color: grey;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
+}
+
+.schema img {
+  width: 100%;
 }
 
 @media(max-width: 768px) {
@@ -359,4 +367,5 @@
 
   }
 }
+
 

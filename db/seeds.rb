@@ -64,7 +64,7 @@ product_category7.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-pr
 product_category7.save!
 
 product_category8 = ProductCategory.create(
-  name: "Produits spécifique / Autre",
+  name: "Produits spécifiques / Autre",
   )
 product_category8.photo.attach(io: File.open(Rails.root.join('db/fixtures/img-product-categories/produit-specifique.jpg')), filename: 'produit-specifique.jpg')
 product_category8.save!

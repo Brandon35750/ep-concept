@@ -19,7 +19,7 @@
 }
 
 .container-societe {
-  width: 100%;
+  width: 80%;
   margin: auto;
   padding-bottom: 32px;
   padding-top: 120px;
@@ -53,6 +53,20 @@
 
 .container.main {
   width:100%
+}
+
+.video {
+  width: 60%;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+  background-color: black;
+}
+
+.descri-home {
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .section {
@@ -382,30 +396,12 @@
 }
 
 .info-society {
+  margin-top: 32px;
   width: 35%;
   border: 2px solid black;
   margin-right: auto;
   margin-left: auto;
   padding: 4px;
-}
-
-.grid {
-  display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-}
-
-.cards-index {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin: 0 auto;
-  // width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 16px;
-  height: auto;
-  background-color: white;
 }
 
 .contact {

@@ -562,7 +562,7 @@ product48.save!
 # product50.save!
 
 product51 = Product.create(
-  name: "Ep Traditionnel Zinc",
+  name: "Produits spécifiques / Autre",
   description: "Goutiere 56 cm diametre 3",
   number_of_customizable_dimensions: 0,
   product_category: product_category8,

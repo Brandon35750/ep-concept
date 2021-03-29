@@ -8,232 +8,279 @@
 </div>
 <div class="container-main">
   <div class="container">
-    <h1><strong>Nos gammes de produits</strong></h1>
+    <!-- <div class="container">
+      <h1><strong>NOS GAMMES DE PRODUITS</strong></h1>
+    </div> -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 fw-normal">Nos gammes de produits</h1>
+    </div>
+    <div class="container-index container-index-img">
+      <div class="cards-index">
+        <% @product_categories.each do |product_categories| %>
+          <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path product_categories.photo.key %>)">
+            <h4><%=product_categories.name%></h4>
+              <div class="button">
+                <h4 class="one"><%= link_to "Acceder aux produits", product_category_path(product_categories.id)%></h4>
+              </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="container" id="society">
+      <div class="container-societe">
+        <h1><strong>Premier réseau de partenaires locaux et nationaux, dans la fabrication et conception de produit de COUVERTURE et d’ETANCHEITE</strong>.</h1>
+      </div>
+        <a id="logo" href="/"><%= image_tag "logo1.jpg", alt: "logo" %></a>
+        <!-- <div class="container-home">
+          <div class="div-block-10">
+            <h2><strong>Nous vous proposons des produits sur mesure de qualité :</strong></h2>
+              <ul class="container">
+                <p><strong><i>PLIAGE</i></strong></p>
+                <p><strong><i>EVACUATION DES EAUX PLUVIALES</i></strong></p>
+                <p><strong><i>CRAPAUDINE / PARE GRAVIER</i></strong></p>
+                <p><strong><i>VENTILATION</i></strong></p>
+                <p><strong><i>CROSSE / BOITE A CABLE</i></strong></p>
+                <p><strong><i>BOITE A EAU / TUYAU DE DESCENTE</i></strong></p>
+                <p><strong><i>GOUTTIERE</i></strong></p>
+                <p><strong><i>PRODUITS SPECIFIQUE.</i></strong></p>
+              </ul>
+          </div>
+          <div class="div-block-10">
+            <h2><strong>Nous pouvons vous répondre avec différentes matières :</strong></h2>
+              <ul class="container">
+                <p><strong>ALU</strong></p>
+                <p><strong>GALVA</strong></p>
+                <p><strong>ZINC</strong></p>
+                <p><strong>PLOMB</strong></p>
+                <p><strong>CUIVRE</strong></p>
+              </ul>
+          </div>
+        </div> -->
+    </div>
+
+    <div class="container py-4">
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-light rounded-3">
+          <h2><strong>Nous vous proposons des produits sur mesure de qualité :</strong></h2>
+            <p><strong><i>PLIAGE</i></strong></p>
+            <p><strong><i>EVACUATION DES EAUX PLUVIALES</i></strong></p>
+            <p><strong><i>CRAPAUDINE / PARE GRAVIER</i></strong></p>
+            <p><strong><i>VENTILATION</i></strong></p>
+            <p><strong><i>CROSSE / BOITE A CABLE</i></strong></p>
+            <p><strong><i>BOITE A EAU / TUYAU DE DESCENTE</i></strong></p>
+            <p><strong><i>GOUTTIERE</i></strong></p>
+            <p><strong><i>PRODUITS SPECIFIQUE.</i></strong></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-light border rounded-3">
+          <h2><strong>Nous pouvons vous répondre avec différentes matières :</strong></h2>
+            <p><strong>ALU</strong></p>
+            <p><strong>GALVA</strong></p>
+            <p><strong>ZINC</strong></p>
+            <p><strong>PLOMB</strong></p>
+            <p><strong>CUIVRE</strong></p>
+          </div>
+        </div>
+      </div>
   </div>
-  <div class="container-index container-index-img">
-    <div class="cards-index">
+
+    <div class="container-societe" id="devis">
+      <h2><strong>Un outil de demande de prix en ligne : « Intuitif, Facile d’utilisation, Efficace, rapide.»</strong>.</h2>
+    </div>
+    <div class="container">
+      <div class="schema">
+        <%= image_tag "shema.png", alt: "logo" %>
+      </div>
+      <div>
+        <h2><strong>Envoyer vos demandes de prix facilement avec l’outil de devis en ligne « EP CONNECT »</strong>.</h2>
+      </div>
+      <div class="info-society">
+        <p>Sur chantier avec votre smartphone</p>
+        <p>Au bureau avec votre PC</p>
+      </div>
+    </div>
+    <div class="video">
+      <div>
+        <video width="" height="" controls>
+          <source src="https://www.youtube.com/watch?v=r5AA-xDyfTE" type="video/mp4">
+          <source src="https://www.youtube.com/watch?v=r5AA-xDyfTEv" type="video/ogg">
+          Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+      </div>
+    </div>
+<!--     <h1><strong>Des partenaires à <font color="#2383FC">PROXIMITE</font> de vos chantiers, vous apportant <font color="#2383FC">REACTIVITE</font> et <font color="#2383FC">QUALITE</font>.</h1>
+ -->   <!--  <div class="container logo">
+      <div class="descri-home">
+        <h2><i><strong>DEPANNAGE</strong></i></h2>
+          <div>
+            <p><I>"Il vous manque un produit sur chantier Vous êtes loin de votre dépôt, dans un autre département, une autre région."</I></p>
+          </div>
+      </div>
+      <div class="descri-home">
+        <h2><i><strong>STOCK</strong></i></h2>
+          <div>
+            <p><I>"Vous êtes dans votre dépôt, vous souhaitez refaire votre stock pour anticiper les chantiers à venir."</I></p>
+          </div>
+      </div>
+      <div class="descri-home">
+        <h2><i><strong>CHANTIER</strong></i></h2>
+          <div>
+            <p><I>"Vous avez un chantier à venir, vous souhaitez prévoir une livraison à votre dépôt ou sur chantier."</I></p>
+          </div>
+      </div>
+    </div> -->
+
+    <div class="py-5" id="featured-3">
+  <h2 class="pb-2 border-bottom"><strong>Des partenaires à <font color="#2383FC">PROXIMITE</font> de vos chantiers, vous apportant <font color="#2383FC">REACTIVITE</font> et <font color="#2383FC">QUALITE</font>.</h2>
+  <div class="row g-5 py-5">
+    <div class="feature col-md-4">
+      <div class="feature-icon bg-primary bg-gradient">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <h2><i><strong>DEPANNAGE</strong></i></h2>
+            <p><I>"Il vous manque un produit sur chantier Vous êtes loin de votre dépôt, dans un autre département, une autre région."</I></p>
+    </div>
+    <div class="feature col-md-4">
+      <div class="feature-icon bg-primary bg-gradient">
+        <i class="fas fa-layer-group"></i>
+      </div>
+      <h2><i><strong>STOCK</strong></i></h2>
+            <p><I>"Vous êtes dans votre dépôt, vous souhaitez refaire votre stock pour anticiper les chantiers à venir."</I></p>
+    </div>
+    <div class="feature col-md-4">
+      <div class="feature-icon bg-primary bg-gradient">
+        <<i class="fas fa-hard-hat"></i>
+      </div>
+      <h2><i><strong>CHANTIER</strong></i></h2>
+            <p><I>"Vous avez un chantier à venir, vous souhaitez prévoir une livraison à votre dépôt ou sur chantier."</I></p>
+    </div>
+  </div>
+</div>
+
+
+    <div class="bandeau">
       <% @product_categories.each do |product_categories| %>
-        <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path product_categories.photo.key %>)">
-          <h4><%=product_categories.name%></h4>
-            <div class="button">
-              <h4 class="one"><%= link_to "Acceder aux produits", product_category_path(product_categories.id)%></h4>
-            </div>
+        <div class="presentation">
+          <img src="<%= cl_image_path product_categories.photo.key %>" height="146" width="145">
         </div>
       <% end %>
     </div>
-  </div>
-  <div class="container" id="society">
+    <h2><strong>Faire Appel à nous c’est :</strong></h2>
+    <div class="container">
+      <ul>
+        <div class="descri-home">
+          <h3><i class="fas fa-angle-right"></i> Limiter les coûts de transport grâce nos partenaires de <font color="#2383FC"><strong>PROXIMITE</strong></font>.</h3>
+        </div>
+        <div class="descri-home">
+          <h3><i class="fas fa-angle-right"></i> Optimiser le délai de fabrication et de livraison grâce à notre <font color="#2383FC"><strong>REACTIVITE</strong></font>.</h3>
+        </div>
+        <div class="descri-home">
+          <h3><i class="fas fa-angle-right"></i> Répondre à vos demandes dans les meilleurs délais avec des produits de <font color="#2383FC"><strong>QUALITE</strong></font>.</h3>
+        </div>
+      </ul>
+    </div>
     <div class="container-societe">
-    <h1><strong>Premier réseau de partenaires locaux et nationaux, dans la fabrication et conception de produit de COUVERTURE et d’ETANCHEITE</strong>.</h1>
+      <h2><strong>Nous garantissons des délais de fabrication et livraison rapide grâce à notre réseau de partenaire locaux, Régionaux et Nationaux</strong>.</h2>
     </div>
-      <a id="logo" href="/"><%= image_tag "logo1.jpg", alt: "logo" %></a>
-      <div class="container-home">
-        <div class="div-block-10">
-          <h2><strong>Nous vous proposons des produits sur mesure de qualité :</strong></h2>
-            <ul class="container">
-              <p>PLIAGE</p>
-              <p>EVACUATION DES EAUX PLUVIALES</p>
-              <p>CRAPAUDINE / PARE GRAVIER</p>
-              <p>VENTILATION</p>
-              <p>CROSSE / BOITE A CABLE</p>
-              <p>BOITE A EAU / TUYAU DE DESCENTE</p>
-              <p>GOUTTIERE</p>
-              <p>PRODUITS SPECIFIQUE.</p>
-            </ul>
-        </div>
-        <div class="div-block-10">
-          <h2><strong>Nous pouvons vous répondre avec différentes matières :</strong></h2>
-            <ul class="container">
-              <p>ALU</p>
-              <p>GALVA</p>
-              <p>ZINC</p>
-              <p>PLOMB</p>
-              <p>CUIVRE</p>
-            </ul>
-        </div>
-      </div>
-      <div class="container-societe" id="devis">
-        <h1><strong>Un outil de demande de prix en ligne : « Intuitif, Facile d’utilisation, Efficace, rapide.»</strong>.</h1>
-      </div>
-      <div class="container">
-        <div class="schema">
-        <%= image_tag "shema.png", alt: "logo" %>
-        </div>
+    <div class="container logo">
+      <div id="image">
+        <%= image_tag "carte.jpg", alt: "logo" %>
         <div>
-          <h2>Envoyer vos demandes de prix facilement avec l’outil de devis en ligne « EP CONNECT ».</h2>
-        </div>
-        <div class="info-society">
-          <ul>
-            <li>Sur chantier avec votre smartphone</li>
-            <li>Au bureau avec votre PC</li>
-          </ul>
+          <p><strong>Des partenaires nationaux et locaux</strong></p>
         </div>
       </div>
-      <div class="video">
+      <div id="image">
+        <%= image_tag "qualite.jpg", alt: "logo" %>
+          <div>
+            <p> <strong>Produit de qualité, respect des normes</strong></p>
+          </div>
       </div>
-      <!-- <div> -->
-        <!-- <h1>Des partenaires à <strong>PROXIMITE</strong> de vos chantiers, vous apportant <strong>REACTIVITE</strong> et <strong>QUALITE</strong>.</h1>
-          <ul class="container">
-            <h2><i><strong>DEPANNAGE</strong></i></h2>
-            <p>Il vous manque un produit sur chantier Vous êtes loin de votre dépôt, dans un autre département, une autre région.</p>
-            <h2><i><strong>STOCK</strong></i></h2>
-            <p>Vous êtes dans votre dépôt, vous souhaitez refaire votre stock pour anticiper les chantiers à venir.</p>
-            <h2><i><strong>CHANTIER</strong></i></h2>
-            <p>Vous avez un chantier à venir, vous souhaitez prévoir une livraison à votre dépôt ou sur chantier.</p>
-          </ul>
-        <h1><strong>Faire Appel à nous c’est </strong>:</h1>
-          <ul class="container">
-            <p>Limiter les coûts de transport grâce nos partenaires de <strong>PROXIMITE</strong>.</p>
-            <p>Optimiser le délai de fabrication et de livraison grâce à notre <strong>REACTIVITE</strong>.</p>
-            <p>Répondre à vos demandes dans les meilleurs délais avec des produits de <strong>QUALITE</strong>.</p>
-          </ul>
-        </div> -->
-        <h1>Des partenaires à <font color="#20355E"><strong>PROXIMITE</strong></font> de vos chantiers, vous apportant <font color="#20355E"><strong>REACTIVITE</strong></font> et <font color="#20355E"><strong>QUALITE</strong></font>.</h1>
-        <div class="container logo">
-    <div class="descri-home">
-      <h2><i><strong>DEPANNAGE</strong></i></h2>
-      <div>
-         <p><I>"Il vous manque un produit sur chantier Vous êtes loin de votre dépôt, dans un autre département, une autre région."</I></p>
+      <div id="image">
+        <%= image_tag "mesure", alt: "logo" %>
+          <div>
+            <p><strong>Fabrication sur mesure</strong></p>
+          </div>
       </div>
     </div>
-    <div class="descri-home">
-      <h2><i><strong>STOCK</strong></i></h2>
-      <div>
-         <p><I>"Vous êtes dans votre dépôt, vous souhaitez refaire votre stock pour anticiper les chantiers à venir."</I></p>
+    <div class="bandeau">
+      <% @product_categories.each do |product_categories| %>
+        <div class="presentation">
+          <img src="<%= cl_image_path product_categories.photo.key %>" height="146" width="145">
+        </div>
+      <% end %>
+    </div>
+    <h2 id="contact">Contact</h2>
+    <div class="container-customer contact">
+      <div class="left container">
+        <div class="icons">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <div class="info">
+              <div class="head">
+                <p>Nom</p>
+              </div>
+              <div class="sub-title">
+                <p>Maxime malotaux</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="info">
+              <div class="head">
+                Adresse
+              </div>
+              <div class="sub-title">
+                Montfort sur Meu, France
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <i class="fas fa-envelope"></i>
+            <div class="info">
+              <div class="head">
+                Email
+              </div>
+              <div class="sub-title">
+                maxime@example.com
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right container">
+        <div class="text">
+          Mon Message
+        </div>
+        <form action="#">
+          <div class="fields">
+            <div class="field name">
+              <input type="text" placeholder="Prénom" required>
+            </div>
+            <div class="field email">
+              <input type="email" placeholder="Email" required>
+            </div>
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Code Postal" required>
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Demande" required>
+          </div>
+          <div class="field textarea">
+                                    <!-- Due to more textarea, I got an error so I changed the tag name of this textarea into changeit. -->
+            <changeit cols="30" rows="10" placeholder="Message.." required></changeit>
+          </div>
+          <div class="button">
+            <button type="submit">Me contacter</button>
+          </div>
+        </form>
       </div>
     </div>
-    <div class="descri-home">
-      <h2><i><strong>CHANTIER</strong></i></h2>
-      <div>
-         <p><I>"Vous avez un chantier à venir, vous souhaitez prévoir une livraison à votre dépôt ou sur chantier."</I></p>
-      </div>
-    </div>
-   </div>
-   <h1><strong>Faire Appel à nous c’est :</strong></h1>
-   <div class="container">
-      <div class="descri-home">
-        <h2>Limiter les coûts de transport grâce nos partenaires de <font color="#20355E"><strong>PROXIMITE</strong></font>.</h2>
-      </div>
-      <div class="descri-home">
-        <h2>Optimiser le délai de fabrication et de livraison grâce à notre <font color="#20355E"><strong>REACTIVITE</strong></font>.</h2>
-      </div>
-      <div class="descri-home">
-        <h2>Répondre à vos demandes dans les meilleurs délais avec des produits de <font color="#20355E"><strong>QUALITE</strong></font>.</h2>
-      </div>
+</div>
 
-
-   </div>
-
-      <div class="container-societe">
-        <h1><strong>Nous garantissons des délais de fabrication et livraison rapide grâce à notre réseau de partenaire locaux, Régionaux et Nationaux</strong>.</h1>
-      </div>
-  </div>
-   <div class="container logo">
-    <div id="image">
-      <%= image_tag "carte.jpg", alt: "logo" %>
-      <div>
-         <p><strong>Des partenaires nationaux et locaux</strong></p>
-      </div>
-    </div>
-    <div id="image">
-      <%= image_tag "qualite.jpg", alt: "logo" %>
-      <div>
-         <p> <strong>Produit de qualité, respect des normes</strong></p>
-      </div>
-    </div>
-    <div id="image">
-      <%= image_tag "mesure", alt: "logo" %>
-      <div>
-         <p><strong>Fabrication sur mesure</strong></p>
-      </div>
-    </div>
-   </div>
-
-<div class="container">
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title"></h2>
-<div class="contact-content">
-                <div class="column left">
-<div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">
-Nom</div>
-<div class="sub-title">
-Maxime malotaux</div>
-</div>
-</div>
-<div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">
-Adresse</div>
-<div class="sub-title">
-Montfort sur Meu, France</div>
-</div>
-</div>
-<div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">
-Email</div>
-<div class="sub-title">
-maxime@example.com</div>
-</div>
-</div>
-</div>
-</div>
-<div class="column right">
-                    <div class="text">
-Mon Message</div>
-<form action="#">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="Prénom" required>
-                            </div>
-<div class="field email">
-                                <input type="email" placeholder="Email" required>
-                            </div>
-</div>
-<div class="field">
-                            <input type="text" placeholder="Demande" required>
-                        </div>
-<div class="field textarea">
-                            <!-- Due to more textarea, I got an error so I changed the tag name of this textarea into changeit. -->
-                            <changeit cols="30" rows="10" placeholder="Message.." required></changeit>
-                        </div>
-<div class="button">
-                            <button type="submit">Me contacter</button>
-                        </div>
-</form>
-</div>
-</div>
-</div>
-</section>
-</div>
-  <!-- <div class="section-4 devis-explication">
-    <div class="div-block-7"></div>
-  </div>
-  <div class="section-4">
-    <div class="div-block-8">
-      <div class="div-block-10"></div>
-    </div>
-    <div class="div-block-11" id="society">
-      <%= image_tag "logo-france.jpg", alt: "logo" %>
-      <%= image_tag "carte.jpg", alt: "logo" %>
-      <%= image_tag "mesure.jpg", alt: "logo" %>
-      <%= image_tag "qualite.jpg", alt: "logo" %>
-  </div>
-  <div class="section-4">
-    <div class="div-block-8 resume" >
-      <div class="text-block-5 description-ep">Note: Réseau de partenaire locaux et nationaux.<br>‍<br>Réactivité, Qualité<br>‍<br>Envoyer vos demande de prix facilement<br>‍<br>Sur chantier avec votre smartphone<br>‍<br>Au bureau avec votre PC<br>‍<br>Par téléphone<br>‍<br>Par mail<br>‍<br>Demande de devis intuitif, Facile d&#x27;utilisation et rapide<br>‍<br>Demande de prix rapide et facile, pour pouvoir répondre à vos appels d&#x27;offre dans les meilleurs délai. Et anticiper vos commandes<br>‍<br>Délai de fabrication et livraison rapide grâce au réseau de partenaire locaux et nationaux</div>
-    </div>
-  </div> -->
-
-</div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5fd63f7bbb814e437b40f0ad" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
-
 

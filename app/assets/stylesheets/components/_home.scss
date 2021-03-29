@@ -16,13 +16,17 @@
   h2 {
     font-family: Inconsolata;
   }
+  h3 {
+    font-family: Inconsolata;
+    font-size: 24px;
+  }
 }
 
 .container-societe {
   width: 80%;
   margin: auto;
   padding-bottom: 32px;
-  padding-top: 120px;
+  margin-top: 32px;
   font-family: Inconsolata;
   h1 {
     font-family: Inconsolata;
@@ -52,17 +56,56 @@
 }
 
 .container.main {
-  width:100%
+  width: 100%;
+  background-color: white;
 }
 
-.video {
-  width: 60%;
-  height: 400px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 40px;
-  background-color: black;
+.bandeau {
+  width: 100%;
+  background-color: #2383FC;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  margin-bottom: 32px;
+  border: 1px solid #21355E;
 }
+
+.presentation {
+  height: 150px;
+  margin: 2px;
+}
+
+@media(max-width: 1250px) {
+  .bandeau {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: white;
+    border: 0px solid #21355E;
+  }
+}
+@media(max-width: 768px) {
+  .bandeau {
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
+    border: 0px solid #21355E;
+  }
+}
+@media(max-width: 420px) {
+  .bandeau {
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border: 0px solid #21355E;
+  }
+}
+
+
+// .video {
+//   width: 60%;
+//   height: 400px;
+//   margin-right: auto;
+//   margin-left: auto;
+//   margin-bottom: 80px;
+//   background-color: #21355E;
+// }
 
 .descri-home {
   margin-top: 32px;
@@ -324,10 +367,10 @@
 .div-block-10 {
   width: 100%;
   height: auto;
-  padding: 8 px;
   margin: 32px;
-  box-shadow: 1px 1px 3px 0 #000, 1px 1px 3px 0 #000;
-  padding: 8px;
+  box-shadow: 1px 1px 1px 0 #000;
+  border: 8px solid #21355E;
+  padding: 4px;
   font-family: Inconsolata;
 }
 
@@ -347,13 +390,13 @@
 
 #logo img {
   width: 50%;
-  border: 1px solid black;
+  border: 1px solid #2383FC;
   margin-bottom: 32px;
   box-shadow: 10px 10px 30px 0 lightgrey, 10px 10px 30px 0 lightgrey;
 }
 
 .schema {
-  background-color: grey;
+  background-color: #2383FC;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -388,6 +431,7 @@
   display: flex;
   justify-content: space-around;
   padding: 12px;
+  margin-bottom: 32px;
 }
 
 .logo img {
@@ -396,52 +440,20 @@
 }
 
 .info-society {
-  margin-top: 32px;
-  width: 35%;
-  border: 2px solid black;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: auto;
+  border: 2px solid #2383FC;
   margin-right: auto;
   margin-left: auto;
-  padding: 4px;
+  padding: 12px;
 }
 
 .contact {
   padding-top: 120px;
 }
-.contact .title::after{
-    content: "Contact moi";
-}
-.contact .contact-content .column{
-    width: calc(50% - 30px);
-}
-.contact .contact-content .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.contact .contact-content .left p{
-    text-align: justify;
-}
-.contact .contact-content .left .icons{
-    margin: 10px 0;
-}
-.contact .contact-content .row{
-    display: flex;
-    height: 65px;
-    align-items: center;
-}
-.contact .contact-content .row .info{
-    margin-left: 30px;
-}
-.contact .contact-content .row i{
-    font-size: 25px;
-    color: #4684C8;
-}
-.contact .contact-content .info .head{
-    font-weight: 500;
-}
-.contact .contact-content .info .sub-title{
-    color: #333;
-}
+
+
 .contact .right form .fields{
     display: flex;
 }
@@ -501,4 +513,16 @@
 .contact .right form .button button:hover{
     color: #4684C8;
     background: none;
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: .75rem;
 }

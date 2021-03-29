@@ -15,6 +15,13 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 // }
 // $my-font: "Font Name";
 
+.container h1 {
+  color: #21355E;
+  }
+  h2 {
+    color: #21355E;
+  }
+
 @media(max-width: 768px) {
   .container-3 h1 {
     font-size: 2.5rem;
@@ -29,7 +36,7 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
     font-size: 1rem;
   }
   .container p{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .container-conseil p {
     font-size: 0.7rem;

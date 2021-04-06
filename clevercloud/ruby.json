@@ -3,3 +3,4 @@
     "rakegoals": ["assets:precompile", "db:migrate"]
   }
 }
+

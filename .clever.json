@@ -1,16 +1,9 @@
 {
   "apps": [
     {
-      "app_id": "app_d46387b1-28cf-4b59-9ef9-6df38067e433",
-      "org_id": "user_fd3b86f8-9761-422c-9b7f-80586ed30986",
-      "deploy_url": "https://push-par-clevercloud-customers.services.clever-cloud.com/app_d46387b1-28cf-4b59-9ef9-6df38067e433.git",
-      "name": "max-ep",
-      "alias": "max-ep"
-    },
-    {
-      "app_id": "app_fcdbe0be-c24e-4254-8ed9-fc102a329258",
+      "app_id": "app_32b37c0f-5bbe-49c1-b4b1-fa8a781ca8ae",
       "org_id": "user_ef6a85ae-2e58-48bc-acb4-be80220050ed",
-      "deploy_url": "https://push-par-clevercloud-customers.services.clever-cloud.com/app_fcdbe0be-c24e-4254-8ed9-fc102a329258.git",
+      "deploy_url": "https://push-par-clevercloud-customers.services.clever-cloud.com/app_32b37c0f-5bbe-49c1-b4b1-fa8a781ca8ae.git",
       "name": "ep-connect",
       "alias": "ep-connect"
     }

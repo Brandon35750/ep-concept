@@ -1,11 +1,11 @@
 {
   "apps": [
     {
-      "app_id": "app_980c8baf-e355-4349-826a-4ef8663ca272",
-      "org_id": "user_ef6a85ae-2e58-48bc-acb4-be80220050ed",
-      "deploy_url": "https://push-par-clevercloud-customers.services.clever-cloud.com/app_980c8baf-e355-4349-826a-4ef8663ca272.git",
-      "name": "Ep-Connect",
-      "alias": "Ep-Connect"
+      "app_id": "app_2f133385-fd42-46ab-8d86-5a266c332f01",
+      "org_id": "user_fd3b86f8-9761-422c-9b7f-80586ed30986",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_2f133385-fd42-46ab-8d86-5a266c332f01.git",
+      "name": "Ep-connect",
+      "alias": "Ep-connect"
     }
   ]
 }

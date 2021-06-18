@@ -1,9 +1,9 @@
 {
   "apps": [
     {
-      "app_id": "app_c4fb3f18-502f-4b6e-be08-51c7cd9a2a78",
+      "app_id": "app_243bdab7-64dd-454a-94bb-38b658a3e5c4",
       "org_id": "user_fd3b86f8-9761-422c-9b7f-80586ed30986",
-      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_c4fb3f18-502f-4b6e-be08-51c7cd9a2a78.git",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_243bdab7-64dd-454a-94bb-38b658a3e5c4.git",
       "name": "ep-connect",
       "alias": "ep-connect"
     }
